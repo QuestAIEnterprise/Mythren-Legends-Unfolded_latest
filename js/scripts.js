@@ -42,3 +42,28 @@ function showPopup() {
 function hidePopup() {
     document.getElementById("rewardPopup").style.display = "none";
 }
+
+// XP and HP progress bar calculation
+function updateProgressBars() {
+    var progressBars = document.querySelectorAll('.progress');
+    progressBars.forEach(function (bar) {
+        var currentXp = bar.getAttribute('data-current-xp');
+        var maxXp = bar.getAttribute('data-max-xp');
+        if (currentXp && maxXp) {
+            var percentage = (currentXp / maxXp) * 100;
+            bar.style.width = percentage + '%';
+            bar.innerHTML = `${currentXp}/${maxXp} XP (${percentage.toFixed(2)}%)`;
+        }
+
+        var currentHp = bar.getAttribute('data-current-hp');
+        var maxHp = bar.getAttribute('data-max-hp');
+        if (currentHp && maxHp) {
+            var percentage = (currentHp / maxHp) * 100;
+            bar.style.width = percentage + '%';
+            bar.innerHTML = `${currentHp}/${maxHp} HP (${percentage.toFixed(2)}%)`;
+        }
+    });
+}
+
+// Call the function to update the progress bars on page load
+updateProgressBars();

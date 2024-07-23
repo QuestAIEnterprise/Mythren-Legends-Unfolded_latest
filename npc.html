@@ -3,85 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ωlaut Dawnbringer - Mythren: Legends Unfolded</title>
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/bars.css">
+    <title>NPC Side - Mythren: Legends Unfolded</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            color: #eaeaea;
+            background: url('data/pictures/Webside Icon.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+            header h1 {
+                margin: 0;
+            }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+                nav ul li a {
+                    color: #eaeaea;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+
+        main {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        section h2 {
+            text-align: center;
+        }
+
+        .npc {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+            .npc img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+
+            .npc h3 {
+                margin: 0 0 10px;
+            }
+
+            .npc p {
+                margin: 5px 0;
+            }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="character-container">
-        <div class="character">
-            <img src="data/pictures/oluat-dawnbringer.jpg" alt="Ωlaut Dawnbringer" class="character-img">
-            <div class="info">
-                <h3>Ωlaut Dawnbringer</h3>
-                <div class="level-bar">
-                    <div class="progress" style="width: 33%;"><span>166/500 XP</span></div>
-                    <div class="marker" style="left: 33%;"></div>
-                    <div class="tick" style="left: 10%;"></div>
-                    <div class="tick" style="left: 20%;"></div>
-                    <div class="tick" style="left: 30%;"></div>
-                    <div class="tick" style="left: 40%;"></div>
-                    <div class="tick" style="left: 50%;"></div>
-                    <div class="tick" style="left: 60%;"></div>
-                    <div class="tick" style="left: 70%;"></div>
-                    <div class="tick" style="left: 80%;"></div>
-                    <div class="tick" style="left: 90%;"></div>
-                </div>
-                <div class="hitpoints-bar">
-                    <div class="progress" style="width: 100%;"><span>12/12 HP</span></div>
-                    <div class="marker" style="left: 100%;"></div>
-                    <div class="tick" style="left: 10%;"></div>
-                    <div class="tick" style="left: 20%;"></div>
-                    <div class="tick" style="left: 30%;"></div>
-                    <div class="tick" style="left: 40%;"></div>
-                    <div class="tick" style="left: 50%;"></div>
-                    <div class="tick" style="left: 60%;"></div>
-                    <div class="tick" style="left: 70%;"></div>
-                    <div class="tick" style="left: 80%;"></div>
-                    <div class="tick" style="left: 90%;"></div>
-                </div>
-                <div class="details">
-                    <p><strong>Level:</strong> 1</p>
-                    <p><strong>Hit Points:</strong> 12</p>
-                    <p><strong>XP:</strong> 166</p>
-                    <p><strong>Race:</strong> Dragonborn</p>
-                    <p><strong>Class:</strong> Paladin</p>
-                    <p><strong>Alignment:</strong> Lawful Good</p>
-                    <p><strong>Ability Scores:</strong></p>
-                    <ul>
-                        <li>Strength: 18 (+4)</li>
-                        <li>Dexterity: 10 (0)</li>
-                        <li>Constitution: 16 (+3)</li>
-                        <li>Intelligence: 10 (0)</li>
-                        <li>Wisdom: 13 (+1)</li>
-                        <li>Charisma: 14 (+2)</li>
-                    </ul>
-                    <p><strong>Spells:</strong></p>
-                    <ul>
-                        <li>Divine Sense</li>
-                        <li>Lay on Hands</li>
-                    </ul>
-                </div>
-                <div class="inventory">
-                    <p><strong>Inventory:</strong></p>
-                    <ul>
-                        <li>Healing Kit</li>
-                        <li>Chain Mail</li>
-                        <li>Shield</li>
-                        <li>Longsword</li>
-                        <li>Holy Symbol</li>
-                        <li>Explorer's Pack</li>
-                    </ul>
+    <header>
+        <h1>NPC Side</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="karakter.html">Karakter Side</a></li>
+                <li><a href="npc.html">NPC Side</a></li>
+                <li><a href="verden.html">Verden Side</a></li>
+                <li><a href="realm.html">Realm Side</a></li>
+                <li><a href="regions.html">Regions Side</a></li>
+                <li><a href="regler.html">Regler</a></li>
+                <li><a href="position.html">Nuværende Position</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>NPC'er</h2>
+            <div class="npc">
+                <img src="data/pictures/lirael.jpg" alt="Lirael">
+                <div>
+                    <h3>Lirael</h3>
+                    <p><strong>Race:</strong> Wood Elf</p>
+                    <p><strong>Role:</strong> Dronning</p>
+                    <p><strong>Description:</strong> Leder af skovelverne, kendt for hendes visdom og styrke.</p>
                 </div>
             </div>
-            <div class="equipment-tab">
-                <img src="data/pictures/oluat-dawnbringer-equipment-tab.png" alt="Ωlaut Dawnbringer Equipment Tab">
-                <p>Equipment Slots</p>
+            <div class="npc">
+                <img src="data/pictures/thalor.jpg" alt="Thalor">
+                <div>
+                    <h3>Thalor</h3>
+                    <p><strong>Race:</strong> Wood Elf</p>
+                    <p><strong>Role:</strong> Præst</p>
+                    <p><strong>Description:</strong> Religiøs leder blandt skovelverne, kendt for hans spirituelle indsigt.</p>
+                </div>
             </div>
-        </div>
-    </div>
+            <div class="npc">
+                <img src="data/pictures/eldrin.jpg" alt="Eldrin">
+                <div>
+                    <h3>Eldrin</h3>
+                    <p><strong>Race:</strong> Wood Elf</p>
+                    <p><strong>Role:</strong> Kriger</p>
+                    <p><strong>Description:</strong> Beskytter af skoven og dens indbyggere, kendt for hans kampfærdigheder.</p>
+                </div>
+            </div>
+            <div class="npc">
+                <img src="data/pictures/arathia.jpg" alt="Arathia">
+                <div>
+                    <h3>Arathia</h3>
+                    <p><strong>Race:</strong> Wood Elf</p>
+                    <p><strong>Role:</strong> Vise Kvinde</p>
+                    <p><strong>Description:</strong> En af de ældste og mest respekterede elvere, kendt for hendes dybe viden om magi.</p>
+                </div>
+            </div>
+            <div class="npc">
+                <img src="data/pictures/kong-balin.jpg" alt="Kong Balin">
+                <div>
+                    <h3>Kong Balin</h3>
+                    <p><strong>Race:</strong> Dværg</p>
+                    <p><strong>Role:</strong> Konge</p>
+                    <p><strong>Description:</strong> Leder af dværgenes rige, kendt for hans retfærdighed og visdom.</p>
+                </div>
+            </div>
+            <div class="npc">
+                <img src="data/pictures/thorin.jpg" alt="Thorin">
+                <div>
+                    <h3>Thorin</h3>
+                    <p><strong>Race:</strong> Dværg</p>
+                    <p><strong>Role:</strong> Rådgiver</p>
+                    <p><strong>Description:</strong> En af de nærmeste rådgivere til Kong Balin, kendt for hans strategiske tænkning.</p>
+                </div>
+            </div>
+            <div class="npc">
+                <img src="data/pictures/dwalin.jpg" alt="Dwalin">
+                <div>
+                    <h3>Dwalin</h3>
+                    <p><strong>Race:</strong> Dværg</p>
+                    <p><strong>Role:</strong> Kriger</p>
+                    <p><strong>Description:</strong> En af de stærkeste krigere i dværgenes rige, kendt for hans mod og styrke.</p>
+                </div>
+            </div>
+            <div class="npc">
+                <img src="data/pictures/kong-alaric.jpg" alt="Kong Alaric">
+                <div>
+                    <h3>Kong Alaric</h3>
+                    <p><strong>Race:</strong> Menneske</p>
+                    <p><strong>Role:</strong> Konge</p>
+                    <p><strong>Description:</strong> Leder af menneskernes rige, kendt for hans retfærdighed og diplomatiske evner.</p>
+                </div>
+            </div>
+            <div class="npc">
+                <img src="data/pictures/isolde.jpg" alt="Isolde">
+                <div>
+                    <h3>Isolde</h3>
+                    <p><strong>Race:</strong> Menneske</p>
+                    <p><strong>Role:</strong> Rådgiver</p>
+                    <p><strong>Description:</strong> En af de nærmeste rådgivere til Kong Alaric, kendt for hendes magiske evner.</p>
+                </div>
+            </div>
+            <div class="npc">
+                <img src="data/pictures/caelus.jpg" alt="Caelus">
+                <div>
+                    <h3>Caelus</h3>
+                    <p><strong>Race:</strong> Menneske</p>
+                    <p><strong>Role:</strong> General</p>
+                    <p><strong>Description:</strong> Leder af menneskernes militær, kendt for hans taktiske geni og mod.</p>
+                </div>
+            </div>
+            <div class="npc">
+                <img src="data/pictures/elysia.jpg" alt="Elysia">
+                <div>
+                    <h3>Elysia</h3>
+                    <p><strong>Race:</strong> Menneske</p>
+                    <p><strong>Role:</strong> Magiker</p>
+                    <p><strong>Description:</strong> En af de stærkeste mag
+                    <p><strong>Description:</strong> En af de stærkeste magikere i menneskernes rige, kendt for hendes dybe viden om magi.</p>
+                </div>
+            </div>
+            <div class="npc">
+                <img src="data/pictures/lucian.jpg" alt="Lucian">
+                <div>
+                    <h3>Lucian</h3>
+                    <p><strong>Race:</strong> Menneske</p>
+                    <p><strong>Role:</strong> Diplomat</p>
+                    <p><strong>Description:</strong> En af de mest talentfulde diplomater i menneskernes rige, kendt for hans evne til at skabe alliancer.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
+    </footer>
 </body>
 </html>
