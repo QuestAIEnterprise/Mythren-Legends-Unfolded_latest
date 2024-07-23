@@ -2,106 +2,7 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Regler - Mythren: Legends Unfolded</title>
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <style>
-        body {
-            font-family: 'Merriweather', serif;
-            margin: 0;
-            padding: 0;
-            color: #eaeaea;
-            background: url('data/pictures/Webside Icon.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        header {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
-            text-align: center;
-        }
-
-            header h1 {
-                margin: 0;
-            }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 10px 0;
-        }
-
-            nav ul li {
-                margin: 0 15px;
-            }
-
-                nav ul li a {
-                    color: #eaeaea;
-                    text-decoration: none;
-                    font-weight: bold;
-                }
-
-        main {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            margin: 20px;
-        }
-
-        section {
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        .xp-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-            .xp-table th, .xp-table td {
-                border: 1px solid #ddd;
-                padding: 8px;
-                text-align: center;
-            }
-
-            .xp-table th {
-                background-color: #4CAF50;
-                color: white;
-            }
-
-            .xp-table tr:nth-child(even) {
-                background-color: #f2f2f2;
-            }
-
-            .xp-table tr:hover {
-                background-color: #ddd;
-            }
-
-        .character-icons img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin: 0 2px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            margin-top: 20px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -109,11 +10,11 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="karakter.html">Karakter Side</a></li>
-                <li><a href="npc.html">NPC Side</a></li>
-                <li><a href="verden.html">Verden Side</a></li>
-                <li><a href="realm.html">Realm Side</a></li>
-                <li><a href="regions.html">Regions Side</a></li>
+                <li><a href="karakter.html">Karakter</a></li>
+                <li><a href="npc.html">NPC</a></li>
+                <li><a href="verden.html">Verden</a></li>
+                <li><a href="realm.html">Realm</a></li>
+                <li><a href="regions.html">Regions</a></li>
                 <li><a href="position.html">Nuværende Position</a></li>
                 <li><a href="regler.html">Regler</a></li>
             </ul>
@@ -122,47 +23,7 @@
     <main>
         <section>
             <h2>Erfaring og Niveauer</h2>
-            <table class="xp-table">
-                <thead>
-                    <tr>
-                        <th>Experience Points</th>
-                        <th>Level</th>
-                        <th>Proficiency Bonus</th>
-                        <th>Karakterer på dette niveau</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>0</td>
-                        <td>1</td>
-                        <td>+2</td>
-                        <td class="character-icons">
-                            <img src="data/pictures/sen-baelion.jpg" alt="Sen Baelion">
-                            <img src="data/pictures/oluat-dawnbringer.jpg" alt="Ωlaut Dawnbringer">
-                            <img src="data/pictures/zephyrian-emberleaf.jpg" alt="Zephyrian Emberleaf">
-                        </td>
-                    </tr>
-                    <tr><td>300</td><td>2</td><td>+2</td><td></td></tr>
-                    <tr><td>900</td><td>3</td><td>+2</td><td></td></tr>
-                    <tr><td>2,700</td><td>4</td><td>+2</td><td></td></tr>
-                    <tr><td>6,500</td><td>5</td><td>+3</td><td></td></tr>
-                    <tr><td>14,000</td><td>6</td><td>+3</td><td></td></tr>
-                    <tr><td>23,000</td><td>7</td><td>+3</td><td></td></tr>
-                    <tr><td>34,000</td><td>8</td><td>+3</td><td></td></tr>
-                    <tr><td>48,000</td><td>9</td><td>+4</td><td></td></tr>
-                    <tr><td>64,000</td><td>10</td><td>+4</td><td></td></tr>
-                    <tr><td>85,000</td><td>11</td><td>+4</td><td></td></tr>
-                    <tr><td>100,000</td><td>12</td><td>+4</td><td></td></tr>
-                    <tr><td>120,000</td><td>13</td><td>+5</td><td></td></tr>
-                    <tr><td>140,000</td><td>14</td><td>+5</td><td></td></tr>
-                    <tr><td>165,000</td><td>15</td><td>+5</td><td></td></tr>
-                    <tr><td>195,000</td><td>16</td><td>+5</td><td></td></tr>
-                    <tr><td>225,000</td><td>17</td><td>+6</td><td></td></tr>
-                    <tr><td>265,000</td><td>18</td><td>+6</td><td></td></tr>
-                    <tr><td>305,000</td><td>19</td><td>+6</td><td></td></tr>
-                    <tr><td>355,000</td><td>20</td><td>+6</td><td></td></tr>
-                </tbody>
-            </table>
+            <p>Dette er en simpel test af regler-siden.</p>
         </section>
     </main>
     <footer>
