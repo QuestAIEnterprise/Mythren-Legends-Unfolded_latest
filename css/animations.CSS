@@ -1,0 +1,33 @@
+/* animations.css */
+
+/* Animated Background */
+@keyframes backgroundShift {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+body {
+    background: url('../data/animated-bg.mp4');
+    background-size: cover;
+    animation: backgroundShift 30s linear infinite;
+}
+
+/* Glowing Effect */
+.glowing {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #fff;
+    }
+
+    to {
+        box-shadow: 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 40px #ff6347;
+    }
+}
