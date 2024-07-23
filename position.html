@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuværende Position - Mythren: Legends Unfolded</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header>
+        <h1>Mythren: Legends Unfolded</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="karakter.html">Karakter</a></li>
+                <li><a href="npc.html">NPC Side</a></li>
+                <li><a href="verden.html">Verden</a></li>
+                <li><a href="realm.html">Realm</a></li>
+                <li><a href="regions.html">Regions</a></li>
+                <li><a href="regler.html">Regler</a></li>
+                <li><a href="position.html">Nuværende Position</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="current-position">
+            <h2>Nuværende Position</h2>
+            <div class="map-container">
+                <img src="data/pictures/Glendoria-Map.jpg" alt="Kort over Glendoria">
+            </div>
+            <div class="quest-details">
+                <h3>Nuværende Quest</h3>
+                <p><strong>Beskrivelse:</strong> Uhyggelige skikkelser bevæger sig i skoven og nogle af landsbyens husdyr, malkekøer osv. er forsvundet. Rejs ind i skoven og find ud af hvad der sker.</p>
+                <p><strong>Belønning:</strong> 100 guldstykker hver</p>
+            </div>
+            <div class="rewards-section">
+                <h3>Belønninger</h3>
+                <table class="rewards-table">
+                    <thead>
+                        <tr>
+                            <th>Karakter</th>
+                            <th>Belønning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sen Baelion</td>
+                            <td><button class="reward-btn" onclick="showPopup()">100 guldstykker</button></td>
+                        </tr>
+                        <tr>
+                            <td>Ωlaut Dawnbringer</td>
+                            <td><button class="reward-btn" onclick="showPopup()">100 guldstykker</button></td>
+                        </tr>
+                        <tr>
+                            <td>Zephyrian Emberleaf</td>
+                            <td><button class="reward-btn" onclick="showPopup()">100 guldstykker</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
+    </footer>
+
+    <!-- Reward Popup -->
+    <div id="rewardPopup" class="reward-popup">
+        <div class="popup-content">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <img src="data/pictures/gold-coins.png" alt="Guldmønter">
+            <p>100 guldstykker og EXP</p>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

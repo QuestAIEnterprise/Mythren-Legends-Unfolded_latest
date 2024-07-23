@@ -1,0 +1,283 @@
+/* Animated Gradient Background */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(270deg, #1e3c72, #2a5298, #0f2027);
+    background-size: 600% 600%;
+    animation: gradientShift 30s ease infinite;
+}
+
+/* Custom Cursor */
+body {
+    cursor: url('../data/custom-cursor.png'), auto;
+}
+
+/* Glowing Effect for Buttons */
+button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    button.glowing {
+        animation: glow 1s ease-in-out infinite alternate;
+    }
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #ff6347;
+    }
+
+    to {
+        box-shadow: 0 0 20px #ff6347, 0 0 30px #ff6347, 0 0 40px #ff6347;
+    }
+}
+
+/* Responsive Navigation Menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* Tooltip Styling */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+/* Footer with Social Media Icons */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #d4af37;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    footer .social-icons {
+        margin-top: 10px;
+    }
+
+        footer .social-icons a {
+            color: #d4af37;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+            footer .social-icons a:hover {
+                color: #ff6347;
+            }
+
+/* Custom Video Background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Glowing Effect for Headings */
+.glowing {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #f5a623;
+    }
+
+    to {
+        box-shadow: 0 0 20px #f5a623, 0 0 30px #f5a623, 0 0 40px #f5a623;
+    }
+}
+
+/* Enhanced Tooltip Styling */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the tooltip element */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+/* Map Container */
+.map-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+    .map-container img {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #555;
+        border-radius: 8px;
+    }
+
+/* Quest Details */
+.quest-details {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 8px;
+    color: #f5a623;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+    .quest-details h3 {
+        margin-top: 0;
+    }
+
+    .quest-details p {
+        margin: 0.5rem 0;
+    }
+
+/* Rewards Section */
+.rewards-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    border-radius: 8px;
+    color: #f5a623;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+    .rewards-section h3 {
+        margin-top: 0;
+    }
+
+.rewards-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+    .rewards-table th, .rewards-table td {
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+        text-align: left;
+    }
+
+    .rewards-table th {
+        background-color: #333;
+        color: #f5a623;
+    }
+
+    .rewards-table tr:nth-child(even) {
+        background-color: #2c2c2c;
+    }
+
+    .rewards-table tr:hover {
+        background-color: #444;
+        color: #fff;
+    }
+
+/* Reward Popup */
+.reward-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1002;
+    text-align: center;
+}
+
+    .reward-popup img {
+        max-width: 100px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .reward-popup p {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #ff6347;
+        font-weight: bold;
+    }
+
+    .reward-popup button {
+        background-color: #ff6347;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 1rem;
+    }
+
+        .reward-popup button:hover {
+            background-color: #d44a35;
+        }

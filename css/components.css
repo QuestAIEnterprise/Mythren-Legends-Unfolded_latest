@@ -1,0 +1,112 @@
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .features ul li {
+        margin-bottom: 1rem;
+        padding-left: 1rem;
+        position: relative;
+    }
+
+        .features ul li::before {
+            content: "\2022";
+            color: #d4af37;
+            font-weight: bold;
+            display: inline-block;
+            width: 1rem;
+            margin-left: -1rem;
+        }
+
+.level-bar, .hitpoints-bar {
+    width: 100%;
+    background-color: #555;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    position: relative;
+    background-image: url('../data/A_detailed_and_ornate_fantasy_border_for_an_experi.png');
+    background-size: cover;
+    border: 2px solid transparent;
+}
+
+    .level-bar .progress, .hitpoints-bar .progress {
+        height: 20px;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+    }
+
+    .level-bar .progress {
+        background-color: #1e90ff; /* Royal blue for experience */
+    }
+
+    .hitpoints-bar .progress {
+        background-color: #ff6347; /* Glitter red for hitpoints */
+    }
+
+        .level-bar .progress span, .hitpoints-bar .progress span {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            text-shadow: 1px 1px 2px #000; /* Add text shadow for better visibility */
+        }
+
+    .level-bar .marker, .hitpoints-bar .marker {
+        position: absolute;
+        top: -5px; /* Adjust the marker's position */
+        left: 33%; /* This will be updated dynamically */
+        width: 20px;
+        height: 20px;
+        background-image: url('../data/A_detailed_and_ornate_fantasy_marker.png'); /* Placeholder for marker image */
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translateX(-50%);
+    }
+
+    .level-bar .tick, .hitpoints-bar .tick {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #fff;
+        opacity: 0.5;
+    }
+
+        .level-bar .tick:nth-child(1), .hitpoints-bar .tick:nth-child(1) {
+            left: 10%;
+        }
+
+        .level-bar .tick:nth-child(2), .hitpoints-bar .tick:nth-child(2) {
+            left: 20%;
+        }
+
+        .level-bar .tick:nth-child(3), .hitpoints-bar .tick:nth-child(3) {
+            left: 30%;
+        }
+
+        .level-bar .tick:nth-child(4), .hitpoints-bar .tick:nth-child(4) {
+            left: 40%;
+        }
+
+        .level-bar .tick:nth-child(5), .hitpoints-bar .tick:nth-child(5) {
+            left: 50%;
+        }
+
+        .level-bar .tick:nth-child(6), .hitpoints-bar .tick:nth-child(6) {
+            left: 60%;
+        }
+
+        .level-bar .tick:nth-child(7), .hitpoints-bar .tick:nth-child(7) {
+            left: 70%;
+        }
+
+        .level-bar .tick:nth-child(8), .hitpoints-bar .tick:nth-child(8) {
+            left: 80%;
+        }
+
+        .level-bar .tick:nth-child(9), .hitpoints-bar .tick:nth-child(9) {
+            left: 90%;
+        }
