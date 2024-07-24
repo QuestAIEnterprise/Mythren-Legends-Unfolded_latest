@@ -301,3 +301,71 @@ h2 {
             padding: 15px;
         }
 }
+/* Generel styling for header */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    position: relative;
+}
+
+    header h1 {
+        text-align: center;
+        color: #eaeaea;
+        margin: 0;
+    }
+
+nav .menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #eaeaea;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: #eaeaea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+/* Mobil specifik styling */
+@media (max-width: 600px) {
+    nav .menu-toggle {
+        display: block;
+    }
+
+    nav ul.nav-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+        nav ul.nav-menu.active {
+            display: flex;
+        }
+
+        nav ul.nav-menu li {
+            margin: 10px 0;
+        }
+}

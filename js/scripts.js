@@ -89,3 +89,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Call the function to update the progress bars on page load
     updateProgressBars();
 });
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuToggle = document.querySelector('.menu-toggle');
+    var navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        });
+    });
+</script>
