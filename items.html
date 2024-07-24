@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items - Mythren: Legends Unfolded</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            color: #eaeaea;
+            background: url('data/pictures/item-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow-y: auto;
+            animation: zoomBackground 20s infinite alternate;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        @keyframes zoomBackground {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header, footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+            header.faded, footer.faded {
+                opacity: 0.2;
+            }
+
+            header h1, footer p {
+                margin: 0;
+                color: #eaeaea;
+            }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+                nav ul li a {
+                    color: #eaeaea;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .item-card {
+            background-color: #2c2c2c;
+            border: 1px solid #444;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            color: #ddd;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.2s, background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+            .item-card:hover {
+                transform: scale(1.05);
+                background-color: #3a3a3a;
+            }
+
+            .item-card img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .item-card h3 {
+                font-family: 'Cinzel', serif;
+                color: #fff;
+                margin: 10px 0;
+            }
+
+            .item-card p {
+                font-family: 'Roboto', sans-serif;
+                color: #ccc;
+            }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mythren: Items</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="karakter.html">Karakter</a></li>
+                <li><a href="npc.html">NPC</a></li>
+                <li><a href="verden.html">Verden</a></li>
+                <li><a href="realm.html">Realm</a></li>
+                <li><a href="regions.html">Regions</a></li>
+                <li><a href="progression.html">Regler</a></li>
+                <li><a href="position.html">Nuværende Position</a></li>
+                <li><a href="items.html">Items</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <main>
+            <section class="item-grid">
+                <a href="headgear.html" class="item-card">
+                    <img src="data/items/headgear.jpg" alt="Headgear">
+                    <h3>Headgear</h3>
+                    <p>Beskrivelse af headgear.</p>
+                </a>
+                <a href="neck.html" class="item-card">
+                    <img src="data/items/neck.jpg" alt="Neck">
+                    <h3>Neck</h3>
+                    <p>Beskrivelse af halskæder og amuletter.</p>
+                </a>
+                <a href="shoulders.html" class="item-card">
+                    <img src="data/items/shoulders.jpg" alt="Shoulders">
+                    <h3>Shoulders</h3>
+                    <p>Beskrivelse af skulderbeskyttere.</p>
+                </a>
+                <a href="back.html" class="item-card">
+                    <img src="data/items/back.jpg" alt="Back">
+                    <h3>Back</h3>
+                    <p>Beskrivelse af kapper.</p>
+                </a>
+                <a href="chest.html" class="item-card">
+                    <img src="data/items/chest.jpg" alt="Chest">
+                    <h3>Chest Armor</h3>
+                    <p>Beskrivelse af brystplader.</p>
+                </a>
+                <a href="wrist.html" class="item-card">
+                    <img src="data/items/wrist.jpg" alt="Wrist">
+                    <h3>Wrist</h3>
+                    <p>Beskrivelse af armbånd og bånd.</p>
+                </a>
+                <a href="hands.html" class="item-card">
+                    <img src="data/items/hands.jpg" alt="Hands">
+                    <h3>Hands</h3>
+                    <p>Beskrivelse af handsker.</p>
+                </a>
+                <a href="waist.html" class="item-card">
+                    <img src="data/items/waist.jpg" alt="Waist">
+                    <h3>Waist</h3>
+                    <p>Beskrivelse af bælter.</p>
+                </a>
+                <a href="legs.html" class="item-card">
+                    <img src="data/items/legs.jpg" alt="Legs">
+                    <h3>Leg Armor</h3>
+                    <p>Beskrivelse af benbeskyttere.</p>
+                </a>
+                <a href="feet.html" class="item-card">
+                    <img src="data/items/feet.jpg" alt="Feet">
+                    <h3>Feet</h3>
+                    <p>Beskrivelse af støvler og sko.</p>
+                </a>
+                <a href="finger.html" class="item-card">
+                    <img src="data/items/finger.jpg" alt="Finger">
+                    <h3>Finger</h3>
+                    <p>Beskrivelse af ringe.</p>
+                </a>
+                <a href="trinket.html" class="item-card">
+                    <img src="data/items/trinket.jpg" alt="
+                    <h3>Trinket</h3>
+                    <p>Beskrivelse af trinkets.</p>
+                </a>
+                <a href="main-hand.html" class="item-card">
+                    <img src="data/items/main-hand.jpg" alt="Main Hand">
+                    <h3>Main Hand</h3>
+                    <p>Beskrivelse af primære våben.</p>
+                </a>
+                <a href="off-hand.html" class="item-card">
+                    <img src="data/items/off-hand.jpg" alt="Off Hand">
+                    <h3>Off Hand</h3>
+                    <p>Beskrivelse af sekundære våben eller skjolde.</p>
+                </a>
+                <a href="ranged.html" class="item-card">
+                    <img src="data/items/ranged.jpg" alt="Ranged">
+                    <h3>Ranged</h3>
+                    <p>Beskrivelse af buer, pistoler, wands osv.</p>
+                </a>
+                <a href="relic.html" class="item-card">
+                    <img src="data/items/relic.jpg" alt="Relic">
+                    <h3>Relic</h3>
+                    <p>Beskrivelse af relics.</p>
+                </a>
+                <a href="tabard.html" class="item-card">
+                    <img src="data/items/tabard.jpg" alt="Tabard">
+                    <h3>Tabard</h3>
+                    <p>Beskrivelse af tabards.</p>
+                </a>
+                <a href="shirt.html" class="item-card">
+                    <img src="data/items/shirt.jpg" alt="Shirt">
+                    <h3>Shirt</h3>
+                    <p>Beskrivelse af skjorter.</p>
+                </a>
+                <a href="bag.html" class="item-card">
+                    <img src="data/items/bag.jpg" alt="Bag">
+                    <h3>Bag</h3>
+                    <p>Beskrivelse af tasker.</p>
+                </a>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
+    </footer>
+
+    <script>
+        // Fade effect for header and footer
+        var header = document.querySelector("header");
+        var footer = document.querySelector("footer");
+
+        function fadeOut() {
+            header.classList.add("faded");
+            footer.classList.add("faded");
+        }
+
+        function fadeIn() {
+            header.classList.remove("faded");
+            footer.classList.remove("faded");
+        }
+
+        header.addEventListener("mouseenter", fadeIn);
+        header.addEventListener("mouseleave", fadeOut);
+        footer.addEventListener("mouseenter", fadeIn);
+        footer.addEventListener("mouseleave", fadeOut);
+
+        // Initial fade out
+        fadeOut();
+    </script>
+</body>
+</html>

@@ -4,134 +4,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verden - Mythren: Legends Unfolded</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/colors.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/custom.css">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            color: #eaeaea;
+            background: url('data/pictures/dragon-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow-y: auto;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        header, footer {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+
+            header.faded, footer.faded {
+                opacity: 0.2;
+            }
+
+            header h1, footer p {
+                margin: 0;
+                text-align: center;
+            }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+                nav ul li a {
+                    color: #eaeaea;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+
+        main {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        section h2 {
+            text-align: center;
+        }
+
+        .world-section {
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+            .world-section h3 {
+                text-align: center;
+            }
+    </style>
 </head>
-
 <body>
-    <header>
-        <h1>Verden Side</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="karakter.html">Karakter</a></li>
-                <li><a href="npc.html">NPC</a></li>
-                <li><a href="verden.html">Verden</a></li>
-                <li><a href="realm.html">Realm</a></li>
-                <li><a href="regions.html">Regions</a></li>
-                <li><a href="progression.html">Regler</a></li>
-                <li><a href="position.html">Nuværende Position</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Verden</h2>
-            <p>
-                Mythren er en verden af ubegrænset magi og mystik, hvor eventyret venter ved hver en krog. Her strækker vidtstrakte skove og majestætiske bjerge sig så langt øjet rækker, hver med deres egne hemmeligheder og farer. Gamle ruiner og forladte byer vidner om en tid, hvor mægtige imperier og glemte civilisationer regerede, og venter kun på at blive udforsket af modige eventyrere.
-
-                I Mythren kan du støde på magtfulde troldmænd, noble riddere, og skjulte ordener, alle med deres egne agendaer og historier at fortælle. Farer lurer overalt, fra frygtindgydende monstre og lumske skabninger til magiske fælder og forbandede genstande. Men for dem, der er villige til at tage risikoen, er der utallige skatte at finde, fra ældgamle artefakter med mystiske kræfter til glemt viden, der kan ændre skæbnen for hele riger.
-
-                Dette er en verden, hvor elementernes kræfter kan tæmmes, og hvor legender skabes. Hver handling, du tager, kan skabe ringe i vandet, der påvirker hele Mythren. Oplev kampe af episke proportioner, indgå alliancer med forskellige racer og fraktioner, og form din egen skæbne i denne levende og åndeløst spændende verden.
-            </p>
-            <div class="world-section">
-                <h3>Landskab</h3>
+    <div class="content">
+        <header>
+            <h1>Verden Side</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="karakter.html">Karakter</a></li>
+                    <li><a href="npc.html">NPC</a></li>
+                    <li><a href="verden.html">Verden</a></li>
+                    <li><a href="realm.html">Realm</a></li>
+                    <li><a href="regions.html">Regions</a></li>
+                    <li><a href="progression.html">Regler</a></li>
+                    <li><a href="position.html">Nuværende Position</a></li>
+                    <li><a href="items.html">Items</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Verden</h2>
                 <p>
-                    Mythren er en verden med et utroligt varieret terræn, der spænder over dramatiske bjerge, tætte skove, åbne sletter og maleriske kystlinjer. De majestætiske bjergkæder strækker sig mod himlen, deres sneklædte tinder funkler i solen og gemmer på hemmeligheder, som kun de mest modige eventyrere tør udforske. I skovene kan man finde alt fra mørke, mystiske skovdyb med træer, der strækker sig så højt, at de næsten blokerer solen, til frodige grønne områder fulde af liv og skjulte stier.
+                    Mythren er en verden af ubegrænset magi og mystik, hvor eventyret venter ved hver en krog. Her strækker vidtstrakte skove og majestætiske bjerge sig så langt øjet rækker, hver med deres egne hemmeligheder og farer. Gamle ruiner og forladte byer vidner om en tid, hvor mægtige imperier og glemte civilisationer regerede, og venter kun på at blive udforsket af modige eventyrere.
 
-                    Sletterne i Mythren er store, åbne områder, hvor vinden blæser frit over bølgende græshav, og dyrelivet trives. Her kan man finde alt fra roligt græssende dyr til vilde, rovdyr på jagt. Kystlinjerne er præget af stejle klipper, brede sandstrande og små, hemmelige bugter, hvor havets bølger konstant former landskabet. Nogle områder er beriget med koralrev, der vrimler med farverige fisk og mystiske havvæsner.
+                    I Mythren kan du støde på magtfulde troldmænd, noble riddere, og skjulte ordener, alle med deres egne agendaer og historier at fortælle. Farer lurer overalt, fra frygtindgydende monstre og lumske skabninger til magiske fælder og forbandede genstande. Men for dem, der er villige til at tage risikoen, er der utallige skatte at finde, fra ældgamle artefakter med mystiske kræfter til glemt viden, der kan ændre skæbnen for hele riger.
 
-                    Klimaet i Mythren varierer lige så meget som landskabet. I de nordlige regioner kan man opleve iskolde, sneklædte områder, hvor isstorme og frost er almindelige. Mod syd findes frodige, varme skove med et tropisk klima, hvor det regner ofte, og vegetationen er tæt. I midten af kontinentet finder man vulkanske områder, hvor lava flyder frit, og jorden er varm under fødderne, hvilket skaber et dramatisk og farligt landskab fyldt med gejsere og kogende kilder.
-
-                    Hvert område i Mythren byder på sine egne unikke udfordringer og skønheder, hvilket gør det til en verden rig på eventyr og udforskning. Fra de højeste bjergtoppe til de dybeste skovdyb er der altid noget nyt at opdage og opleve..
+                    Dette er en verden, hvor elementernes kræfter kan tæmmes, og hvor legender skabes. Hver handling, du tager, kan skabe ringe i vandet, der påvirker hele Mythren. Oplev kampe af episke proportioner, indgå alliancer med forskellige racer og fraktioner, og form din egen skæbne i denne levende og åndeløst spændende verden.
                 </p>
-            </div>
-            <div class="world-section">
-                <h3>Historiske Steder</h3>
-                <p>
-                    Mythren er en verden gennemsyret af historie og gamle fortællinger, hvor mystiske ruiner og magiske steder ligger spredt over hele landet. Disse steder bærer vidnesbyrd om en tid, hvor mægtige civilisationer blomstrede og faldt, og hvor magien flød frit gennem alles liv.
+                <div class="world-section">
+                    <h3>Landskab</h3>
+                    <p>
+                        Mythren er en verden med et utroligt varieret terræn, der spænder over dramatiske bjerge, tætte skove, åbne sletter og maleriske kystlinjer. De majestætiske bjergkæder strækker sig mod himlen, deres sneklædte tinder funkler i solen og gemmer på hemmeligheder, som kun de mest modige eventyrere tør udforske. I skovene kan man finde alt fra mørke, mystiske skovdyb med træer, der strækker sig så højt, at de næsten blokerer solen, til frodige grønne områder fulde af liv og skjulte stier.
 
-                    I de dybeste skove og højest oppe i bjergene finder man ruiner af gamle byer, templer og slotte, som nu kun er skygger af deres tidligere storhed. Marmorstatuer, nu halvt forvitrede og dækket af mos, står som tavse vagter over de hemmeligheder, de en gang beskyttede. Store haller, nu fyldt med stilhed og støv, husede engang fester og ceremonier, hvis ekkoer stadig kan fornemmes i vinden. Disse ruiner er ofte farlige, fyldt med gamle fælder og beskyttelsesfortryllelser, der stadig fungerer, og vogter over skjulte skatte og ældgammel viden.
+                        Sletterne i Mythren er store, åbne områder, hvor vinden blæser frit over bølgende græshav, og dyrelivet trives. Her kan man finde alt fra roligt græssende dyr til vilde, rovdyr på jagt. Kystlinjerne er præget af stejle klipper, brede sandstrande og små, hemmelige bugter, hvor havets bølger konstant former landskabet. Nogle områder er beriget med koralrev, der vrimler med farverige fisk og mystiske havvæsner.
 
-                    Magiske steder er lige så talrige som ruinerne. Hellige lunde, hvor magien er stærkest, og hvor naturen selv synes at være levende og bevidst, findes skjult væk fra alfarvej. Her vokser planter og urter med kraftige helbredende eller giftige egenskaber, og vismænd og druider kommer for at lære og tilbede. Andre steder kan man finde mystiske portaler, der fører til ukendte dimensioner, eller magiske søer og kilder, der siges at give visdom eller opfylde ønsker til de rette, som kan finde dem og betjene sig af deres kræfter.
+                        Klimaet i Mythren varierer lige så meget som landskabet. I de nordlige regioner kan man opleve iskolde, sneklædte områder, hvor isstorme og frost er almindelige. Mod syd findes frodige, varme skove med et tropisk klima, hvor det regner ofte, og vegetationen er tæt. I midten af kontinentet finder man vulkanske områder, hvor lava flyder frit, og jorden er varm under fødderne, hvilket skaber et dramatisk og farligt landskab fyldt med gejsere og kogende kilder.
 
-                    Hvert sted i Mythren bærer på historier om heltemod, forræderi, kærlighed og tab. Fra de mægtige troldmænds tårne, der engang rakte mod himlen, til de underjordiske gange, der blev brugt som tilflugtssteder i krigstider, er disse steder levende mindesmærker over en tid, der var, og en inspiration til fremtidige generationer. Eventyrere og forskere strømmer til disse steder i håbet om at afdække deres hemmeligheder, finde uvurderlige artefakter eller blot lære mere om Mythrens rige og komplekse historie..
-                </p>
-            </div>
-            <div class="world-section">
-                <h3>Handelsveje</h3>
-                <p>
-                    Mythren er gennemvævet af et komplekst netværk af handelsveje og stier, som har eksisteret i århundreder. Disse veje forbinder de forskellige regioner i landet og muliggør en rig udveksling af varer, kultur og ideer. Handelsvejene er livsnerven i Mythrens økonomi og kulturudveksling, og de snor sig gennem varierede landskaber, fra de frodige sletter til de barske bjergkæder og de tætte skove.
+                        Hvert område i Mythren byder på sine egne unikke udfordringer og skønheder, hvilket gør det til en verden rig på eventyr og udforskning. Fra de højeste bjergtoppe til de dybeste skovdyb er der altid noget nyt at opdage og opleve.
+                    </p>
+                </div>
+                <div class="world-section">
+                    <h3>Historiske Steder</h3>
+                    <p>
+                        Mythren er en verden gennemsyret af historie og gamle fortællinger, hvor mystiske ruiner og magiske steder ligger spredt over hele landet. Disse steder bærer vidnesbyrd om en tid, hvor mægtige civilisationer blomstrede og faldt, og hvor magien flød frit gennem alles liv.
 
-                    De vigtigste handelsveje er brede og velholdte, ofte brolagt og bevogtet af lokale herskere eller købmænd, der sørger for, at rejsende og handelskaravaner kan passere sikkert. Langs disse hovedveje ligger travle handelsbyer og markedspladser, hvor alt fra eksotiske krydderier og stoffer til håndværk og magiske artefakter kan købes og sælges. Handelsfolk fra fjerne egne bringer deres varer og historier med sig, hvilket skaber et smeltedigel af kulturer og sprog på disse markedspladser.
+                        I de dybeste skove og højest oppe i bjergene finder man ruiner af gamle byer, templer og slotte, som nu kun er skygger af deres tidligere storhed. Marmorstatuer, nu halvt forvitrede og dækket af mos, står som tavse vagter over de hemmeligheder, de en gang beskyttede. Store haller, nu fyldt med stilhed og støv, husede engang fester og ceremonier, hvis ekkoer stadig kan fornemmes i vinden. Disse ruiner er ofte farlige, fyldt med gamle fælder og beskyttelsesfortryllelser, der stadig fungerer, og vogter over skjulte skatte og ældgammel viden.
 
-                    Udover de store handelsveje findes der utallige mindre stier og skjulte ruter, der bruges af eventyrere, smuglere og nomadiske folk. Disse stier er ofte farlige og kræver stor viden og færdigheder at navigere, men de kan føre til skjulte oaser, ukendte byer eller gamle ruiner fyldt med skatte. Nomadiske stammer og rejsende håndværkere bruger disse ruter til at handle med afsidesliggende landsbyer og byer, der ikke ligger på de større handelsveje.
+                        Magiske steder er lige så talrige som ruinerne. Hellige lunde, hvor magien er stærkest, og hvor naturen selv synes at være levende og bevidst, findes skjult væk fra alfarvej. Her vokser planter og urter med kraftige helbredende eller giftige egenskaber, og vismænd og druider kommer for at lære og tilbede. Andre steder kan man finde mystiske portaler, der fører til ukendte dimensioner, eller magiske søer og kilder, der siges at give visdom eller opfylde ønsker til de rette, som kan finde dem og betjene sig af deres kræfter.
 
-                    Handelsvejene i Mythren er også vigtige kulturveje. Gennem århundreder har de været kanaler for udveksling af ikke kun varer, men også kunst, musik, traditioner og teknologi. Mødet mellem forskellige folk og kulturer har ført til en rig blanding af arkitektoniske stilarter, kulinariske traditioner og kunstneriske udtryk i byerne langs disse ruter. Historikere og lærde finder stor interesse i at studere de kulturelle påvirkninger, som disse handelsveje har bragt til Mythren.
+                        Hvert sted i Mythren bærer på historier om heltemod, forræderi, kærlighed og tab. Fra de mægtige troldmænds t
+                        .tårne, der engang rakte mod himlen, til de underjordiske gange, der blev brugt som tilflugtssteder i krigstider, er disse steder levende mindesmærker over en tid, der var, og en inspiration til fremtidige generationer. Eventyrere og forskere strømmer til disse steder i håbet om at afdække deres hemmeligheder, finde uvurderlige artefakter eller blot lære mere om Mythrens rige og komplekse historie.
+                    </p>
+                </div>
+                <div class="world-section">
+                    <h3>Handelsveje</h3>
+                    <p>
+                        Mythren er gennemvævet af et komplekst netværk af handelsveje og stier, som har eksisteret i århundreder. Disse veje forbinder de forskellige regioner i landet og muliggør en rig udveksling af varer, kultur og ideer. Handelsvejene er livsnerven i Mythrens økonomi og kulturudveksling, og de snor sig gennem varierede landskaber, fra de frodige sletter til de barske bjergkæder og de tætte skove.
 
-                    Selvom handelsvejene hovedsageligt bruges til fredelige formål, er de også blevet brugt til militære ekspeditioner og politiske alliancer. Hære har marcheret langs disse veje, og diplomatiske udsendinge har rejst dem for at forhandle traktater og alliancer. Handelsvejene er derfor ikke kun økonomiske og kulturelle, men også strategiske aktiver i Mythrens komplekse politiske landskab.
+                        De vigtigste handelsveje er brede og velholdte, ofte brolagt og bevogtet af lokale herskere eller købmænd, der sørger for, at rejsende og handelskaravaner kan passere sikkert. Langs disse hovedveje ligger travle handelsbyer og markedspladser, hvor alt fra eksotiske krydderier og stoffer til håndværk og magiske artefakter kan købes og sælges. Handelsfolk fra fjerne egne bringer deres varer og historier med sig, hvilket skaber et smeltedigel af kulturer og sprog på disse markedspladser.
 
-                    I dag fortsætter handelsvejene med at være afgørende for Mythrens sammenhængskraft, og de forbliver et symbol på forbindelsen mellem de mange forskellige folk og kulturer, der kalder denne magiske verden deres hjem..
-                </p>
-            </div>
-            <div class="world-section">
-                <h3>Økosystemer</h3>
-                <p>
-                    Mythren er velsignet med en overflod af økosystemer, som er hjem for et varieret og rigt dyre- og planteliv. Disse økosystemer spænder fra de frostkolde tundraer og sneklædte bjergtoppe i nord til de frodige skove, blomstrende sletter og varme ørkenområder mod syd. Hver region i Mythren har sin unikke flora og fauna, der er tilpasset de specifikke klimatiske og geografiske forhold.
+                        Udover de store handelsveje findes der utallige mindre stier og skjulte ruter, der bruges af eventyrere, smuglere og nomadiske folk. Disse stier er ofte farlige og kræver stor viden og færdigheder at navigere, men de kan føre til skjulte oaser, ukendte byer eller gamle ruiner fyldt med skatte. Nomadiske stammer og rejsende håndværkere bruger disse ruter til at handle med afsidesliggende landsbyer og byer, der ikke ligger på de større handelsveje.
 
-                    I de nordlige tundraer og bjergområder finder man hårdføre planter som fyrretræer, alperoser og lav, som trives i de kolde, barske klimaer. Dyrelivet her består af isbjørne, rener, ulve og sneharer, som er tilpasset de ekstreme temperaturer. Disse dyr har udviklet tyk pels og fedtlag til at modstå kulden, og de bevæger sig ofte i flokke for at beskytte sig mod rovdyr og vejrforhold.
+                        Handelsvejene i Mythren er også vigtige kulturveje. Gennem århundreder har de været kanaler for udveksling af ikke kun varer, men også kunst, musik, traditioner og teknologi. Mødet mellem forskellige folk og kulturer har ført til en rig blanding af arkitektoniske stilarter, kulinariske traditioner og kunstneriske udtryk i byerne langs disse ruter. Historikere og lærde finder stor interesse i at studere de kulturelle påvirkninger, som disse handelsveje har bragt til Mythren.
 
-                    De store skove i Mythren, både løv- og nåleskove, er et andet vigtigt økosystem. Her findes en mangfoldighed af træer som egetræer, birketræer og grantræer, der danner et tætvævet baldakin, som skaber et rigt habitat for utallige dyrearter. Hjorte, vildsvin, ræve og et utal af fuglearter bebor disse skove, sammen med mere mystiske skabninger som enhjørninger og trænymfer, som ifølge legender beskytter skovene mod udefrakommende trusler.
+                        Selvom handelsvejene hovedsageligt bruges til fredelige formål, er de også blevet brugt til militære ekspeditioner og politiske alliancer. Hære har marcheret langs disse veje, og diplomatiske udsendinge har rejst dem for at forhandle traktater og alliancer. Handelsvejene er derfor ikke kun økonomiske og kulturelle, men også strategiske aktiver i Mythrens komplekse politiske landskab.
 
-                    Sletterne og græslandene i Mythren er kendt for deres vidstrakte enge og vilde blomster, som blomstrer i en række farver om foråret og sommeren. Disse åbne områder er levesteder for store flokke af græssende dyr som bison, antiloper og vildheste. Rovdyr som løver og leoparder strejfer også omkring på sletterne, hvor de jager bytte og opretholder balancen i økosystemet. Sletterne er også hjemsted for mange nomadiske folk, der lever i harmoni med naturen og de vilde dyr.
+                        I dag fortsætter handelsvejene med at være afgørende for Mythrens sammenhængskraft, og de forbliver et symbol på forbindelsen mellem de mange forskellige folk og kulturer, der kalder denne magiske verden deres hjem.
+                    </p>
+                </div>
+                <div class="world-section">
+                    <h3>Økosystemer</h3>
+                    <p>
+                        Mythren er velsignet med en overflod af økosystemer, som er hjem for et varieret og rigt dyre- og planteliv. Disse økosystemer spænder fra de frostkolde tundraer og sneklædte bjergtoppe i nord til de frodige skove, blomstrende sletter og varme ørkenområder mod syd. Hver region i Mythren har sin unikke flora og fauna, der er tilpasset de specifikke klimatiske og geografiske forhold.
 
-                    I de varme og tørre ørkenområder i Mythren finder man et økosystem, der har tilpasset sig ekstreme tørkeforhold. Her vokser kaktusser og andre tørketolerante planter, mens dyrelivet består af skorpioner, ørkenrotter og forskellige reptiler. Ørkenområderne er også kendt for deres oaser, hvor palmer og andre vandelskende planter trives, og som fungerer som vigtige hvilesteder for både dyr og mennesker.
+                        I de nordlige tundraer og bjergområder finder man hårdføre planter som fyrretræer, alperoser og lav, som trives i de kolde, barske klimaer. Dyrelivet her består af isbjørne, rener, ulve og sneharer, som er tilpasset de ekstreme temperaturer. Disse dyr har udviklet tyk pels og fedtlag til at modstå kulden, og de bevæger sig ofte i flokke for at beskytte sig mod rovdyr og vejrforhold.
 
-                    Vandområder som floder, søer og kystlinjer i Mythren huser deres egne unikke økosystemer. Her finder man fisk, amfibier, vandfugle og en række akvatiske planter. De store floder fungerer som livsårer, der giver vand til både mennesker og dyr og er vigtige transportveje for handel og rejser. Kystlinjerne, med deres koralrev og mangroveskove, er hjemsted for en rig biodiversitet og fungerer som yngleområder for mange marine arter.
+                        De store skove i Mythren, både løv- og nåleskove, er et andet vigtigt økosystem. Her findes en mangfoldighed af træer som egetræer, birketræer og grantræer, der danner et tætvævet baldakin, som skaber et rigt habitat for utallige dyrearter. Hjorte, vildsvin, ræve og et utal af fuglearter bebor disse skove, sammen med mere mystiske skabninger som enhjørninger og trænymfer, som ifølge legender beskytter skovene mod udefrakommende trusler.
 
-                    Økosystemerne i Mythren er komplekse og indbyrdes forbundne, og de spiller en afgørende rolle i at opretholde balance og harmoni i denne magiske verden. Hver region byder på sine egne særegne skønheder og udfordringer, og de rige økosystemer er ikke kun vigtige for planetens sundhed, men også for dens kulturelle og mytologiske rigdom. Udforskere og eventyrere, der rejser gennem Mythren, vil finde en verden fyldt med naturlig skønhed og mystiske skabninger, som hver især bidrager til det større økologiske væv..
-                </p>
-            </div>
-            <div class="world-section">
-                <h3>Mægtige Byer</h3>
-                <p>
-                    Mythren er en vidtstrakt verden, der kendetegnes ved sin varierede geografi og rige historie. I hjertet af dens civilisation ligger flere store byer, der tjener som kulturelle, administrative og militære centre.
+                        Sletterne og græslandene i Mythren er kendt for deres vidstrakte enge og vilde blomster, som blomstrer i en række farver om foråret og sommeren. Disse åbne områder er levesteder for store flokke af græssende dyr som bison, antiloper og vildheste. Rovdyr som løver og leoparder strejfer også omkring på sletterne, hvor de jager bytte og opretholder balancen i økosystemet. Sletterne er også hjemsted for mange nomadiske folk, der lever i harmoni med naturen og de vilde dyr.
 
-                    Eryndor:
-                    Eryndor, hovedstaden i riget Eryndor, er kendt for sin storslåede arkitektur og blomstrende handel. Byen er et centrum for læring og magi og tiltrækker lærde og magikere fra hele Mythren. Byens høje tårne og gamle biblioteker vidner om dens lange tradition for viden og magt.
+                        I de varme og tørre ørkenområder i Mythren finder man et økosystem, der har tilpasset sig ekstreme tørkeforhold. Her vokser kaktusser og andre tørketolerante planter, mens dyrelivet består af skorpioner, ørkenrotter og forskellige reptiler. Ørkenområderne er også kendt for deres oaser, hvor palmer og andre vandelskende planter trives, og som fungerer som vigtige hvilesteder for både dyr og mennesker.
 
-                    Lothorias:
-                    Lothorias, hovedstaden i riget Lothorias, er berømt for sine smukke haver og kunstneriske præstationer. Denne by er en kulturel fyrtårn, hvor kunst, musik og håndværk fejres. Folkene i Lothorias er kendt for deres udsøgte håndværk, især inden for smykker og skulpturer.
+                        Vandområder som floder, søer og kystlinjer i Mythren huser deres egne unikke økosystemer. Her finder man fisk, amfibier, vandfugle og en række akvatiske planter. De store floder fungerer som livsårer, der giver vand til både mennesker og dyr og er vigtige transportveje for handel og rejser. Kystlinjerne, med deres koralrev og mangroveskove, er hjemsted for en rig biodiversitet og fungerer som yngleområder for mange marine arter.
 
-                    Karak-Dur:
-                    Karak-Dur, hovedstaden i dværgeriget af samme navn, er en by bygget ind i bjergene og kendt for sine imponerende smedjer og minedrift. Dværgene i Karak-Dur er mestre i metalbearbejdning og stenarbejde og producerer nogle af de fineste våben og rustninger i Mythren.
+                        Økosystemerne i Mythren er komplekse og indbyrdes forbundne, og de spiller en afgørende rolle i at opretholde balance og harmoni i denne magiske verden. Hver region byder på sine egne særegne skønheder og udfordringer, og de rige økosystemer er ikke kun vigtige for planetens sundhed, men også for dens kulturelle og mytologiske rigdom. Udforskere og eventyrere, der rejser gennem Mythren, vil finde en verden fyldt med naturlig skønhed og mystiske skabninger, som hver især bidrager til det større økologiske væv.
+                    </p>
+                </div>
+                <div class="world-section">
+                    <h3>Mægtige Byer</h3>
+                    <p>
+                        Mythren er en vidtstrakt verden, der kendetegnes ved sin varierede geografi og rige historie. I hjertet af dens civilisation ligger flere store byer, der tjener som kulturelle, administrative og militære centre.
 
-                    Drakar:
-                    Drakar, hovedbyen i riget Drakar, er kendt for sine krigere og dragehistorier. Denne by er en fæstning, designet til at modstå enhver belejring med høje mure og en veltrænet milits. Drakar er også et center for drageopdrættere og lærde, der studerer de gamle drager, der engang svævede over himlen.
+                        Eryndor:
+                        Eryndor, hovedstaden i riget Eryndor, er kendt for sin storslåede arkitektur og blomstrende handel. Byen er et centrum for læring og magi og tiltrækker lærde og magikere fra hele Mythren. Byens høje tårne og gamle biblioteker vidner om dens lange tradition for viden og magt.
 
-                    Aldoria:
-                    Aldoria, den strålende hovedstad i riget af samme navn, er kendt for sine majestætiske paladser og travle markedspladser. Det er en by for handel og diplomati, der ofte er vært for vigtige politiske møder og handelsforhandlinger. Aldorias centrale beliggenhed gør det til et knudepunkt for rejsende og købmænd fra hele Mythren..
-                </p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
-    </footer>
+                        Lothorias:
+                        Lothorias, hovedstaden i riget Lothorias, er berømt for sine smukke haver og kunstneriske præstationer. Denne by er en kulturel fyrtårn, hvor kunst, musik og håndværk fejres. Folkene i Lothorias er kendt for deres udsøgte håndværk, især inden for smykker og skulpturer.
+
+                        Karak-Dur:
+                        Karak-Dur, hovedstaden i dværgeriget af samme navn, er en by bygget ind i bjergene og kendt for sine imponerende smedjer og minedrift. Dværgene i Karak-Dur er mestre i metalbearbejdning og stenarbejde og producerer
+                        nogle af de fineste våben og rustninger i Mythren. Byens underjordiske veje og tunneler er et vidnesbyrd om dværgenes teknologiske dygtighed og historiske rigdom.
+
+                        Drakar:
+                        Drakar, hovedbyen i riget Drakar, er kendt for sine frygtløse krigere og dybe forankring i dragehistorier og traditioner. Byen fungerer som en stærk fæstning med høje mure og er et centrum for træning af elitetropper og drageopdrættere. Drakar er også hjemsted for akademikere, der studerer de gamle drager og deres hemmeligheder.
+
+                        Aldoria:
+                        Aldoria, den strålende hovedstad i riget Aldoria, er kendt for sine imponerende paladser og livlige markedspladser. Byen er et center for handel og diplomati, hvor vigtige politiske og økonomiske beslutninger træffes. Aldoria's placering gør den til et knudepunkt for handel, tiltrækker købmænd og rejsende fra hele Mythren og sikrer byens fortsatte velstand og indflydelse.
+                    </p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Fade effect for header and footer
+        var header = document.querySelector("header");
+        var footer = document.querySelector("footer");
+
+        function fadeOut() {
+            header.classList.add("faded");
+            footer.classList.add("faded");
+        }
+
+        function fadeIn() {
+            header.classList.remove("faded");
+            footer.classList.remove("faded");
+        }
+
+        header.addEventListener("mouseenter", fadeIn);
+        header.addEventListener("mouseleave", fadeOut);
+        footer.addEventListener("mouseenter", fadeIn);
+        footer.addEventListener("mouseleave", fadeOut);
+
+        // Initial fade out
+        fadeOut();
+    </script>
 </body>
 </html>
-""
-<style>
-    body {
-        font-family: 'Merriweather', serif;
-        margin: 0;
-        padding: 0;
-        color: #eaeaea; /* Light text */
-        background: url('data/pictures/dragon-background.jpg') no-repeat center center fixed;
-        background-size: cover;
-    }
-
