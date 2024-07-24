@@ -25,11 +25,18 @@
             background-color: rgba(0, 0, 0, 0.8);
             padding: 10px 0;
             text-align: center;
+            width: 100%;
+            transition: opacity 0.5s ease-in-out;
         }
+
+            header.faded, footer.faded {
+                opacity: 0.2;
+            }
 
             header h1, footer p {
                 margin: 0;
                 color: #eaeaea;
+                font-family: 'Cinzel', serif;
             }
 
         nav ul {
@@ -50,10 +57,19 @@
                 }
 
         main {
-            padding: 20px;
+            padding: 40px 20px 20px 20px; /* Added top padding */
             background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             margin: 20px;
+        }
+
+        h2, h3 {
+            font-family: 'Cinzel', serif;
+            color: #fff;
+        }
+
+        p, th, td {
+            font-family: 'Roboto', sans-serif;
         }
 
         table {

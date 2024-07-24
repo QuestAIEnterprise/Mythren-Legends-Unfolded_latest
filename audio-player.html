@@ -1,0 +1,18 @@
+<!-- audio-player.html -->
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Player</title>
+</head>
+<body>
+    <audio id="bg-music" src="data/Background-music.mp3" loop autoplay></audio>
+    <script>
+        window.addEventListener('load', function () {
+            var audio = document.getElementById('bg-music');
+            audio.volume = 0.5; // Set the volume to 50%
+            audio.play();
+        });
+    </script>
+</body>
+</html>

@@ -16,33 +16,77 @@
             font-family: 'Merriweather', serif;
             margin: 0;
             padding: 0;
-            color: #eaeaea; /* Light text */
+            color: #eaeaea;
+            overflow-y: auto;
             background: url('data/pictures/Webside Icon.png') no-repeat center center fixed;
             background-size: cover;
+            position: relative;
         }
+        <iframe src="audio-player.html" style="display: none;" allow="autoplay" > </iframe >
+
+        .video-side-box {
+            position: fixed;
+            top: 0;
+            width: 20%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+            .video-side-box.left {
+                left: 0;
+            }
+
+            .video-side-box.right {
+                right: 0;
+            }
+
+            .video-side-box video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.5;
+            }
 
         .content {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             padding: 20px;
+            margin: 0 20%;
         }
 
         header {
             transition: opacity 0.5s ease-in-out;
-            opacity: 1; /* Fuldt synlig */
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            position: relative;
+            z-index: 3;
         }
 
             header.faded, footer.faded {
-                opacity: 0.2; /* Halvgennemsigtig */
-            
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
-        }
+                opacity: 0.2;
+            }
 
             header h1 {
                 margin: 0;
                 text-align: center;
+                position: relative;
+                z-index: 4;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+                animation: glowingText 1.5s infinite alternate;
             }
+
+        @keyframes glowingText {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
 
         nav ul {
             list-style: none;
@@ -61,21 +105,18 @@
                     font-weight: bold;
                 }
 
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-            .hero h2 {
-                font-size: 3rem;
-            }
-
-        .intro, .world, .features, .call-to-action {
+        .hero, .intro, .world, .features, .call-to-action {
+            position: relative;
+            z-index: 3;
             padding: 50px 20px;
             background: rgba(0, 0, 0, 0.7);
             margin: 20px 0;
             border-radius: 10px;
         }
+
+            .hero h2 {
+                font-size: 3rem;
+            }
 
         .tooltip {
             position: relative;
@@ -91,7 +132,7 @@
                 border-radius: 6px;
                 padding: 5px 0;
                 position: absolute;
-                z-index: 1;
+                z-index: 4;
                 bottom: 125%;
                 left: 50%;
                 margin-left: -60px;
@@ -115,15 +156,14 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 2;
+            z-index: 5;
             padding-top: 100px;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(0, 0, 0, 0.4);
         }
 
         .modal-content {
@@ -150,6 +190,18 @@
     </style>
 </head>
 <body>
+    <div class="video-side-box left">
+        <video autoplay loop muted>
+            <source src="data/background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="video-side-box right">
+        <video autoplay loop muted>
+            <source src="data/background-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     <div class="content">
         <header>
             <h1>Mythren: Legends Unfolded</h1>
@@ -169,8 +221,8 @@
             </nav>
         </header>
         <main>
-            <section class="hero parallax">
-                <div class="hero-text glowing">
+            <section class="hero">
+                <div class="hero-text">
                     <h2>Velkommen til Mythren</h2>
                     <p>Træd ind i en verden fyldt med mystik, magi og ældgamle hemmeligheder. Udforsk fjerne riger, mød heroiske karakterer, og form Mythrens skæbne.</p>
                 </div>
@@ -189,7 +241,7 @@
                     <li class="tooltip"><strong>Karakter Side:</strong> Få detaljeret information om de forskellige karakterer i Mythren, inklusiv deres færdigheder, niveauer, og inventar. <span class="tooltiptext">Udforsk karakterer</span></li>
                     <li class="tooltip"><strong>NPC Side:</strong> Lær om de mange unikke NPC'er, deres baggrundshistorier, og hvordan de interagerer med verdenen. <span class="tooltiptext">Mød NPC'er</span></li>
                     <li class="tooltip"><strong>Verden Side:</strong> Udforsk de forskellige aspekter af Mythrens verden, inklusiv historie, geografi, og kulturer. <span class="tooltiptext">Opdag verdenen</span></li>
-                    <li class="tooltip"><strong>Realm Side:</strong> Få indsigt i de forskellige riger, deres ledere, og de magtstrukturer, der styrer dem. <span class="tooltiptext">Lær om rigerne</span></li>
+                    <li class="tooltip"><strong>Realm Side:</strong> Få indsigt i de forskellige riger, deres ledere, og de magiske fortællinger som venter. <span class="tooltip .tooltiptext">Lær om rigerne</span></li>
                     <li class="tooltip"><strong>Regions Side:</strong> Dyk ned i de forskellige regioner, deres politiske dynamikker, og de konflikter, der former dem. <span class="tooltiptext">Udforsk regioner</span></li>
                 </ul>
             </section>
@@ -202,41 +254,35 @@
         <footer>
             <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
         </footer>
+    </div>
 
-        <!-- Modal Structure -->
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Velkommen til Mythren</h2>
-                <p>Her finder du detaljeret information om vores fantastiske verden.</p>
-            </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Velkommen til Mythren</h2>
+            <p>Her finder du detaljeret information om vores fantastiske verden.</p>
         </div>
     </div>
 
     <script>
-        // Modal functionality
         var modal = document.getElementById("myModal");
         var btn = document.getElementById("myBtn");
         var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks the button, open the modal
         btn.onclick = function () {
             modal.style.display = "block";
         }
 
-        // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
             modal.style.display = "none";
         }
 
-        // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
 
-        // Fade effect for header and footer
         var header = document.querySelector("header");
         var footer = document.querySelector("footer");
 
@@ -255,8 +301,8 @@
         footer.addEventListener("mouseenter", fadeIn);
         footer.addEventListener("mouseleave", fadeOut);
 
-        // Initial fade out
         fadeOut();
     </script>
 </body>
 </html>
+
