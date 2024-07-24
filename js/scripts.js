@@ -1,5 +1,3 @@
-// scripts.js
-
 // Modal functionality
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
@@ -65,5 +63,29 @@ function updateProgressBars() {
     });
 }
 
-// Call the function to update the progress bars on page load
-updateProgressBars();
+document.addEventListener("DOMContentLoaded", function () {
+    var header = document.querySelector("header");
+    var footer = document.querySelector("footer");
+
+    function fadeOut() {
+        header.classList.add("faded");
+        footer.classList.add("faded");
+    }
+
+    function fadeIn() {
+        header.classList.remove("faded");
+        footer.classList.remove("faded");
+    }
+
+    header.addEventListener("mouseenter", fadeIn);
+    header.addEventListener("mouseleave", fadeOut);
+
+    footer.addEventListener("mouseenter", fadeIn);
+    footer.addEventListener("mouseleave", fadeOut);
+
+    // Initial fade out after a short delay to allow for initial interactions
+    setTimeout(fadeOut, 2000);
+
+    // Call the function to update the progress bars on page load
+    updateProgressBars();
+});

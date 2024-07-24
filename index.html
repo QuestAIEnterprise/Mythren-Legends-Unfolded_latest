@@ -28,6 +28,13 @@
         }
 
         header {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1; /* Fuldt synlig */
+        }
+
+            header.faded, footer.faded {
+                opacity: 0.2; /* Halvgennemsigtig */
+            
             background: rgba(0, 0, 0, 0.8);
             padding: 10px 0;
         }
@@ -226,6 +233,28 @@
                 modal.style.display = "none";
             }
         }
+
+        // Fade effect for header and footer
+        var header = document.querySelector("header");
+        var footer = document.querySelector("footer");
+
+        function fadeOut() {
+            header.classList.add("faded");
+            footer.classList.add("faded");
+        }
+
+        function fadeIn() {
+            header.classList.remove("faded");
+            footer.classList.remove("faded");
+        }
+
+        header.addEventListener("mouseenter", fadeIn);
+        header.addEventListener("mouseleave", fadeOut);
+        footer.addEventListener("mouseenter", fadeIn);
+        footer.addEventListener("mouseleave", fadeOut);
+
+        // Initial fade out
+        fadeOut();
     </script>
 </body>
 </html>

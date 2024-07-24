@@ -19,6 +19,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: opacity 0.5s ease; /* Transition for fading */
 }
 
 nav ul {
@@ -60,6 +61,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    transition: opacity 0.5s ease; /* Transition for fading */
 }
 
 .character, .npc {
@@ -219,4 +221,9 @@ footer {
 h2 {
     color: #b22222; /* Dark red for section headers */
     text-align: center;
+}
+
+.faded {
+    opacity: 0.3; /* Lowered opacity for fade-out effect */
+    transition: opacity 0.5s ease; /* Transition effect for opacity change */
 }
