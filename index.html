@@ -22,27 +22,19 @@
             background-size: cover;
             position: relative;
         }
-        <iframe src="audio-player.html" style="display: none;" allow="autoplay" > </iframe >
 
-        .video-side-box {
+        .video-background {
             position: fixed;
             top: 0;
-            width: 20%;
+            left: 0;
+            width: 100%;
             height: 100%;
             overflow: hidden;
-            z-index: 1;
+            z-index: -1;
             pointer-events: none;
         }
 
-            .video-side-box.left {
-                left: 0;
-            }
-
-            .video-side-box.right {
-                right: 0;
-            }
-
-            .video-side-box video {
+            .video-background video {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -53,7 +45,6 @@
             position: relative;
             z-index: 2;
             padding: 20px;
-            margin: 0 20%;
         }
 
         header {
@@ -112,11 +103,27 @@
             background: rgba(0, 0, 0, 0.7);
             margin: 20px 0;
             border-radius: 10px;
+            animation: shine 1.5s infinite alternate; /* Add this line */
         }
 
-            .hero h2 {
-                font-size: 3rem;
+        @keyframes shine {
+            0% {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
             }
+
+            50% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+            }
+
+            100% {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            animation: glowingText 1.5s infinite alternate;
+        }
 
         .tooltip {
             position: relative;
@@ -190,15 +197,10 @@
     </style>
 </head>
 <body>
-    <div class="video-side-box left">
+    <iframe src="audio-player.html" style="display:none;" allow="autoplay"></iframe>
+    <div class="video-background">
         <video autoplay loop muted>
-            <source src="data/background-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="video-side-box right">
-        <video autoplay loop muted>
-            <source src="data/background-video.mp4" type="video/mp4">
+            <audio id="background-music" src="data/Background-music.mp3" loop autoplay></audio>
             Your browser does not support the video tag.
         </video>
     </div>
@@ -238,17 +240,17 @@
             <section class="features">
                 <h2>Hvad kan du finde her?</h2>
                 <ul>
-                    <li class="tooltip"><strong>Karakter Side:</strong> Få detaljeret information om de forskellige karakterer i Mythren, inklusiv deres færdigheder, niveauer, og inventar. <span class="tooltiptext">Udforsk karakterer</span></li>
-                    <li class="tooltip"><strong>NPC Side:</strong> Lær om de mange unikke NPC'er, deres baggrundshistorier, og hvordan de interagerer med verdenen. <span class="tooltiptext">Mød NPC'er</span></li>
+                    <li class="tooltip"><strong>Karakter Side:</strong> Få dybdegående information om de forskellige karakterer i Mythren, inklusive deres unikke færdigheder, niveauer, og omfattende inventar. Dyk ned i deres baggrundshistorier, opdag de magiske evner, de mestrer, og forstå deres rolle i den store fortælling. Uanset om de er helte, skurke eller noget midt imellem, tilbyder denne side en detaljeret oversigt over hver karakter, deres udvikling gennem tiden, og hvordan de bidrager til verdenen af Mythren. <span class="tooltiptext">Udforsk karakterer</span></li>
+                    <li class="tooltip"><strong>NPC Side:</strong> Oplev de mange unikke NPC'er i Mythren, hver med deres egen fascinerende baggrundshistorie og personlige mål. Lær om deres roller i samfundet, deres forbindelser til andre karakterer, og de måder, de interagerer med og påvirker verdenen omkring dem. Udforsk hvordan disse NPC'er former handlinger, skaber alliancer, og tilføjer dybde og dynamik til den levende verden af Mythren. <span class="tooltiptext">Mød NPC'er</span></li>
                     <li class="tooltip"><strong>Verden Side:</strong> Udforsk de forskellige aspekter af Mythrens verden, inklusiv historie, geografi, og kulturer. <span class="tooltiptext">Opdag verdenen</span></li>
-                    <li class="tooltip"><strong>Realm Side:</strong> Få indsigt i de forskellige riger, deres ledere, og de magiske fortællinger som venter. <span class="tooltip .tooltiptext">Lær om rigerne</span></li>
-                    <li class="tooltip"><strong>Regions Side:</strong> Dyk ned i de forskellige regioner, deres politiske dynamikker, og de konflikter, der former dem. <span class="tooltiptext">Udforsk regioner</span></li>
+                    <li class="tooltip"><strong>Realm Side:</strong> Dyk ned i de forskellige riger i Mythren og opdag deres unikke kultur, historie og magiske fortællinger. Lær om de magtfulde ledere, der styrer disse riger, deres ambitioner, og de komplekse politiske dynamikker, der former deres verden. Udforsk de episke eventyr og legender, som venter på at blive udforsket, og oplev de skjulte skatte og mystiske hemmeligheder, der ligger gemt i hvert hjørne af disse fascinerende lande. <span class="tooltiptext">Lær om rigerne</span></li>
+                    <li class="tooltip"><strong>Regions Side:</strong> Dyk ned i de forskellige regioner i Mythren og opdag deres unikke politiske dynamikker og intriger. Udforsk de komplekse magtstrukturer og alliancer, der præger hver region, samt de spændinger og konflikter, der ofte opstår. Forstå, hvordan historiske begivenheder og kulturelle forskelle har formet regionernes identitet, og hvilke udfordringer de står overfor i nutiden. <span class="tooltiptext">Udforsk regioner</span></li>
                 </ul>
             </section>
             <section class="call-to-action">
                 <h2>Deltag i eventyret</h2>
                 <p>Er du klar til at blive en del af Mythren? Dyk ned i de utallige eventyr, mød nye allierede og fjender, og form skæbnen for denne utrolige verden. Din rejse begynder her!</p>
-                <button id="myBtn">Læs mere</button>
+                <button id="myBtn">JOIN</button>
             </section>
         </main>
         <footer>
@@ -305,4 +307,3 @@
     </script>
 </body>
 </html>
-

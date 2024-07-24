@@ -1,18 +1,40 @@
-<!-- audio-player.html -->
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <title>Audio Player</title>
-</head>
-<body>
-    <audio id="bg-music" src="data/Background-music.mp3" loop autoplay></audio>
-    <script>
-        window.addEventListener('load', function () {
-            var audio = document.getElementById('bg-music');
-            audio.volume = 0.5; // Set the volume to 50%
-            audio.play();
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        var audio = document.getElementById('background-music');
+
+        // Check if there is a stored position and set it
+        var storedTime = localStorage.getItem('audioTime');
+        if (storedTime) {
+            audio.currentTime = parseFloat(storedTime);
+        }
+
+        // Store the current time periodically
+        audio.addEventListener('timeupdate', function () {
+            localStorage.setItem('audioTime', audio.currentTime);
         });
-    </script>
-</body>
-</html>
+
+        // Store the play status and play the audio if it was playing
+        var isPlaying = localStorage.getItem('isPlaying');
+        if (isPlaying === 'true') {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+
+        audio.addEventListener('play', function () {
+            localStorage.setItem('isPlaying', 'true');
+        });
+
+        audio.addEventListener('pause', function () {
+            localStorage.setItem('isPlaying', 'false');
+        });
+
+        // Ensure autoplay works in some browsers
+        if (isPlaying !== 'false' && storedTime) {
+            audio.play().catch(() => {
+                // Autoplay failed, possibly due to browser restrictions
+                localStorage.setItem('isPlaying', 'false');
+            });
+        }
+    });
+</script>
