@@ -333,7 +333,7 @@
                                 <li>Constitution: 16 (+3)</li>
                                 <li>Intelligence: 10 (0)</li>
                                 <li>Wisdom: 13 (+1)</li>
-                                <li>Charisma: 14 (+2)</li>
+                                <li>Charisma: 17 (+3)</li>
                             </ul>
                             <p><strong>Spells:</strong></p>
                             <ul>
@@ -347,7 +347,7 @@
                                 <li>Healing Kit</li>
                                 <li>Chain Mail</li>
                                 <li>Shield</li>
-                                <li>Longsword</li>
+                                <li>Greatword</li>
                                 <li>Holy Symbol</li>
                                 <li>Explorer's Pack</li>
                             </ul>
@@ -391,74 +391,95 @@
                             <div class="tick" style="left: 70%;"></div>
                             <div class="tick" style="left: 80%;"></div>
                             <div class="tick" style="left: 90%;"></div>
-                            <div class="details">
-                                <p><strong>Level:</strong> 1</p>
-                                <p><strong>Hit Points:</strong> 10</p>
-                                <p><strong>XP:</strong> 166</p>
-                                <p><strong>Race:</strong> Wood Elf</p>
-                                <p><strong>Class:</strong> Ranger</p>
-                                <p><strong>Alignment:</strong> Neutral Good</p>
-                                <p><strong>Ability Scores:</strong></p>
-                                <ul>
-                                    <li>Strength: 14 (+2)</li>
-                                    <li>Dexterity: 18 (+4)</li>
-                                    <li>Constitution: 13 (+1)</li>
-                                    <li>Intelligence: 12 (+1)</li>
-                                    <li>Wisdom: 16 (+3)</li>
-                                    <li>Charisma: 10 (0)</li>
-                                </ul>
-                                <p><strong>Spells:</strong></p>
-                                <ul>
-                                    <li>Hunter's Mark</li>
-                                    <li>Goodberry</li>
-                                </ul>
-                            </div>
-                            <div class="inventory">
-                                <p><strong>Inventory:</strong></p>
-                                <ul>
-                                    <li>Shadow Staff</li>
-                                    <li>Longbow</li>
-                                    <li>Shortsword</li>
-                                    <li>Leather Armor</li>
-                                    <li>Explorer's Pack</li>
-                                    <li>20 Arrows</li>
-                                </ul>
-                            </div>
                         </div>
-                        <div class="equipment-tab">
-                            <img src="data/pictures/zephyrian-emberleaf-equipment-tab.png" alt="Zephyrian Emberleaf Equipment Tab">
-                            <p>Equipment Slots</p>
+                        <div class="details">
+                            <p><strong>Level:</strong> 1</p>
+                            <p><strong>Hit Points:</strong> 10</p>
+                            <p><strong>XP:</strong> 166</p>
+                            <p><strong>Race:</strong> Wood Elf</p>
+                            <p><strong>Class:</strong> Druid</p>
+                            <p><strong>Alignment:</strong> Neutral Good</p>
+                        </div>
+                        <div class="ability-scores">
+                            <p><strong>Ability Scores:</strong></p>
+                            <ul>
+                                <li>Strength: 10 (+0)</li>
+                                <li>Dexterity: 14 (+2)</li>
+                                <li>Constitution: 14 (+2)</li>
+                                <li>Intelligence: 13 (+1)</li>
+                                <li>Wisdom: 15 (+2)</li>
+                                <li>Charisma: 8 (-1)</li>
+                            </ul>
+                        </div>
+                        <div class="skills">
+                            <p><strong>Skills:</strong></p>
+                            <ul>
+                                <li>Animal Handling (+5)</li>
+                                <li>Perception (+5)</li>
+                                <li>Survival (+5)</li>
+                                <li>Nature (+3)</li>
+                            </ul>
+                        </div>
+                        <div class="spells">
+                            <p><strong>Spells:</strong></p>
+                            <ul>
+                                <li>Cure Wounds</li>
+                                <li>Entangle</li>
+                                <li>Goodberry</li>
+                            </ul>
+                        </div>
+                        <div class="inventory">
+                            <p><strong>Inventory:</strong></p>
+                            <ul>
+                                <li>Shadow Staff</li>
+                                <li>Fishing rod</li>
+                                <li>Dagger</li>
+                                <li>Leather Armor</li>
+                                <li>Explorer's Pack</li>
+                                <li>Druidic Focus</li>
+                            </ul>
+                        </div>
+                        <div class="cantrips">
+                            <p><strong>Cantrips:</strong></p>
+                            <ul>
+                                <li>Guidance</li>
+                                <li>Resistance</li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="equipment-tab">
+                        <img src="data/pictures/zephyrian-emberleaf-equipment-tab.png" alt="Zephyrian Emberleaf Equipment Tab">
+                        <p>Equipment Slots</p>
+                    </div>
                 </div>
-        </section>
+            </div>
     </main>
     <footer>
         <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
     </footer>
-
     <script>
-        // Fade effect for header and footer
-        var header = document.querySelector("header");
-        var footer = document.querySelector("footer");
+        document.addEventListener("DOMContentLoaded", function () {
+            var header = document.querySelector("header");
+            var footer = document.querySelector("footer");
 
-        function fadeOut() {
-            header.classList.add("faded");
-            footer.classList.add("faded");
-        }
+            function fadeOut() {
+                header.classList.add("faded");
+                footer.classList.add("faded");
+            }
 
-        function fadeIn() {
-            header.classList.remove("faded");
-            footer.classList.remove("faded");
-        }
+            function fadeIn() {
+                header.classList.remove("faded");
+                footer.classList.remove("faded");
+            }
 
-        header.addEventListener("mouseenter", fadeIn);
-        header.addEventListener("mouseleave", fadeOut);
-        footer.addEventListener("mouseenter", fadeIn);
-        footer.addEventListener("mouseleave", fadeOut);
+            header.addEventListener("mouseenter", fadeIn);
+            header.addEventListener("mouseleave", fadeOut);
+            footer.addEventListener("mouseenter", fadeIn);
+            footer.addEventListener("mouseleave", fadeOut);
 
-        // Initial fade out
-        fadeOut();
+            // Initial fade out after 3 seconds
+            setTimeout(fadeOut, 3000);
+        });
     </script>
 </body>
 </html>
