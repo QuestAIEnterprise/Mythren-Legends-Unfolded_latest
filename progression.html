@@ -18,16 +18,21 @@
             color: #eaeaea;
             background: url('data/pictures/progression backgruond.png') no-repeat center center fixed;
             background-size: cover;
+            overflow-y: auto; /* Ensure the body can scroll */
         }
 
-        header {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 10px 0;
-            text-align: center;
+        header, footer {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1; /* Fuldt synlig */
         }
 
-            header h1 {
+            header.faded, footer.faded {
+                opacity: 0.2; /* Halvgennemsigtig */
+            }
+
+            header h1, footer p {
                 margin: 0;
+                text-align: center;
             }
 
         nav ul {
@@ -63,29 +68,39 @@
             text-align: center;
         }
 
-        .xp-table {
+        .xp-table, .goods-table, .speed-table, .armor-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
 
-            .xp-table th, .xp-table td {
+            .xp-table th, .xp-table td,
+            .goods-table th, .goods-table td,
+            .speed-table th, .speed-table td,
+            .armor-table th, .armor-table td {
                 border: 1px solid #ddd;
                 padding: 8px;
                 text-align: center;
             }
 
-            .xp-table th {
-                background-color: #4CAF50;
-                color: white;
+            .xp-table th, .goods-table th, .speed-table th, .armor-table th {
+                background-color: #4CAF50; /* Header background color */
+                color: white; /* Header text color */
             }
 
-            .xp-table tr:nth-child(even) {
-                background-color: #f2f2f2;
+            .xp-table tr:nth-child(even), .goods-table tr:nth-child(even),
+            .speed-table tr:nth-child(even), .armor-table tr:nth-child(even) {
+                background-color: #333333; /* Darker background for even rows */
             }
 
-            .xp-table tr:hover {
-                background-color: #ddd;
+            .xp-table tr:nth-child(odd), .goods-table tr:nth-child(odd),
+            .speed-table tr:nth-child(odd), .armor-table tr:nth-child(odd) {
+                background-color: #444444; /* Darker background for odd rows */
+            }
+
+            .xp-table tr:hover, .goods-table tr:hover,
+            .speed-table tr:hover, .armor-table tr:hover {
+                background-color: #555555; /* Darker color for hovered rows */
             }
 
         .character-icons img {
@@ -137,9 +152,9 @@
                         <td>1</td>
                         <td>+2</td>
                         <td class="character-icons">
-                            <img src="data/pictures/sen-baelion.jpg" alt="Sen Baelion">
-                            <img src="data/pictures/oluat-dawnbringer.jpg" alt="Ωlaut Dawnbringer">
-                            <img src="data/pictures/zephyrian-emberleaf.jpg" alt="Zephyrian Emberleaf">
+                            <a href="sen-baelion.html"><img src="data/pictures/sen-baelion.jpg" alt="Sen Baelion"></a>
+                            <a href="oluat-dawnbringer.html"><img src="data/pictures/oluat-dawnbringer.jpg" alt="Ωlaut Dawnbringer"></a>
+                            <a href="zephyrian-emberleaf.html"><img src="data/pictures/zephyrian-emberleaf.jpg" alt="Zephyrian Emberleaf"></a>
                         </td>
                     </tr>
                     <tr><td>300</td><td>2</td><td>+2</td><td></td></tr>
@@ -153,14 +168,195 @@
                     <tr><td>64,000</td><td>10</td><td>+4</td><td></td></tr>
                     <tr><td>85,000</td><td>11</td><td>+4</td><td></td></tr>
                     <tr><td>100,000</td><td>12</td><td>+4</td><td></td></tr>
-                    <tr><td>120,000</td><td>13</td><td>+5</td><td></tr>
-                    <tr><td>140,000</td><td>14</td><td>+5</td><td></tr>
-                    <tr><td>165,000</td><td>15</td><td>+5</td><td></tr>
-                    <tr><td>195,000</td><td>16</td><td>+5</td><td></tr>
-                    <tr><td>225,000</td><td>17</td><td>+6</td><td></tr>
-                    <tr><td>265,000</td><td>18</td><td>+6</td><td></tr>
-                    <tr><td>305,000</td><td>19</td><td>+6</td><td></tr>
-                    <tr><td>355,000</td><td>20</td><td>+6</td><td></tr>
+                    <tr><td>120,000</td><td>13</td><td>+5</td><td></td></tr>
+                    <tr><td>140,000</td><td>14</td><td>+5</td><td></td></tr>
+                    <tr><td>165,000</td><td>15</td><td>+5</td><td></td></tr>
+                    <tr><td>195,000</td><td>16</td><td>+5</td><td></td></tr>
+                    <tr><td>225,000</td><td>17</td><td>+6</td><td></td></tr>
+                    <tr><td>265,000</td><td>18</td><td>+6</td><td></td></tr>
+                    <tr><td>305,000</td><td>19</td><td>+6</td><td></td></tr>
+                    <tr><td>355,000</td><td>20</td><td>+6</td><td></td></tr>
+                </tbody>
+            </table>
+
+            <h2>Handelsvarer</h2>
+            <table class="goods-table">
+                <thead>
+                    <tr>
+                        <th>Pris (gp)</th>
+                        <th>Vare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1 cp</td><td>1 lb. of wheat</td></tr>
+                    <tr><td>2 cp</td><td>1 lb. of flour or one chicken</td></tr>
+                    <tr><td>5 cp</td><td>1 lb. of salt</td></tr>
+                    <tr><td>1 sp</td><td>1 lb. of iron or 1 sq. yd. of canvas</td></tr>
+                    <tr><td>5 sp</td><td>1 lb. of copper or 1 sq. yd. of cotton cloth</td></tr>
+                    <tr><td>1 gp</td><td>1 lb. of ginger or one goat</td></tr>
+                    <tr><td>2 gp</td><td>1 lb. of cinnamon or pepper, or one sheep</td></tr>
+                    <tr><td>3 gp</td><td>1 lb. of cloves or one pig</td></tr>
+                    <tr><td>5 gp</td><td>1 lb. of silver or 1 sq. yd. of linen</td></tr>
+                    <tr><td>10 gp</td><td>1 sq. yd. of silk or one cow</td></tr>
+                    <tr><td>15 gp</td><td>1 lb. of saffron or one ox</td></tr>
+                    <tr><td>50 gp</td><td>1 lb. of gold</td></tr>
+                    <tr><td>500 gp</td><td>1 lb. of platinum</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Rejsehastigheder</h2>
+            <table class="speed-table">
+                <thead>
+                    <tr>
+                        <th>Hastighed</th>
+                        <th>Per Minut</th>
+                        <th>Per Time</th>
+                        <th>Per Dag</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fast</td>
+                        <td>400 feet</td>
+                        <td>4 miles</td>
+                        <td>30 miles</td>
+                        <td>−5 penalty to passive Wisdom (Perception) scores</td>
+                    </tr>
+                    <tr>
+                        <td>Normal</td>
+                        <td>300 feet</td>
+                        <td>3 miles</td>
+                        <td>24 miles</td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Slow</td>
+                        <td>200 feet</td>
+                        <td>2 miles</td>
+                        <td>18 miles</td>
+                        <td>Able to use stealth</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Rustninger</h2>
+            <table class="armor-table">
+                <thead>
+                    <tr>
+                        <th>Rustning</th>
+                        <th>Pris</th>
+                        <th>Armor Class (AC)</th>
+                        <th>Styrke</th>
+                        <th>Skjulthed</th>
+                        <th>Vægt</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Padded</td>
+                        <td>5 gp</td>
+                        <td>11 + Dex modifier</td>
+                        <td>—</td>
+                        <td>Disadvantage</td>
+                        <td>8 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Leather</td>
+                        <td>10 gp</td>
+                        <td>11 + Dex modifier</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>10 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Studded leather</td>
+                        <td>45 gp</td>
+                        <td>12 + Dex modifier</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>13 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Hide</td>
+                        <td>10 gp</td>
+                        <td>12 + Dex modifier (max 2)</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>12 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Chain shirt</td>
+                        <td>50 gp</td>
+                        <td>13 + Dex modifier (max 2)</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>20 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Scale mail</td>
+                        <td>50 gp</td>
+                        <td>14 + Dex modifier (max 2)</td>
+                        <td>—</td>
+                        <td>Disadvantage</td>
+                        <td>45 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Breastplate</td>
+                        <td>400 gp</td>
+                        <td>14 + Dex modifier (max 2)</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>20 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Half plate</td>
+                        <td>750 gp</td>
+                        <td>15 + Dex modifier (max 2)</td>
+                        <td>—</td>
+                        <td>Disadvantage</td>
+                        <td>40 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Ring mail</td>
+                        <td>30 gp</td>
+                        <td>14</td>
+                        <td>—</td>
+                        <td>Disadvantage</td>
+                        <td>40 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Chain mail</td>
+                        <td>75 gp</td>
+                        <td>16</td>
+                        <td>Str 13</td>
+                        <td>Disadvantage</td>
+                        <td>55 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Splint</td>
+                        <td>200 gp</td>
+                        <td>17</td>
+                        <td>Str 15</td>
+                        <td>Disadvantage</td>
+                        <td>60 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Plate</td>
+                        <td>1,500 gp</td>
+                        <td>18</td>
+                        <td>Str 15</td>
+                        <td>Disadvantage</td>
+                        <td>65 lb.</td>
+                    </tr>
+                    <tr>
+                        <td>Shield</td>
+                        <td>10 gp</td>
+                        <td>+2</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>6 lb.</td>
+                    </tr>
                 </tbody>
             </table>
         </section>
@@ -168,5 +364,30 @@
     <footer>
         <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var header = document.querySelector("header");
+            var footer = document.querySelector("footer");
+
+            function fadeOut() {
+                header.classList.add("faded");
+                footer.classList.add("faded");
+            }
+
+            function fadeIn() {
+                header.classList.remove("faded");
+                footer.classList.remove("faded");
+            }
+
+            header.addEventListener("mouseenter", fadeIn);
+            header.addEventListener("mouseleave", fadeOut);
+            footer.addEventListener("mouseenter", fadeIn);
+            footer.addEventListener("mouseleave", fadeOut);
+
+            // Initial fade out after 3 seconds
+            setTimeout(fadeOut, 3000);
+        });
+    </script>
 </body>
 </html>
+

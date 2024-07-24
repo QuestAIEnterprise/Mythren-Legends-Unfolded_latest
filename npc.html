@@ -16,14 +16,20 @@
             background-size: cover;
         }
 
-        header {
+        header, footer {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1; /* Fuldt synlig */
             background: rgba(0, 0, 0, 0.8);
             padding: 10px 0;
-            text-align: center;
         }
 
-            header h1 {
+            header.faded, footer.faded {
+                opacity: 0.2; /* Halvgennemsigtig */
+            }
+
+            header h1, footer p {
                 margin: 0;
+                text-align: center;
             }
 
         nav ul {
@@ -203,7 +209,6 @@
                     <h3>Elysia</h3>
                     <p><strong>Race:</strong> Menneske</p>
                     <p><strong>Role:</strong> Magiker</p>
-                    <p><strong>Description:</strong> En af de stærkeste mag
                     <p><strong>Description:</strong> En af de stærkeste magikere i menneskernes rige, kendt for hendes dybe viden om magi.</p>
                 </div>
             </div>
@@ -221,5 +226,29 @@
     <footer>
         <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
     </footer>
+
+    <script>
+        var header = document.querySelector("header");
+        var footer = document.querySelector("footer");
+
+        function fadeOut() {
+            header.classList.add("faded");
+            footer.classList.add("faded");
+        }
+
+        function fadeIn() {
+            header.classList.remove("faded");
+            footer.classList.remove("faded");
+        }
+
+        header.addEventListener("mouseenter", fadeIn);
+        header.addEventListener("mouseleave", fadeOut);
+
+        footer.addEventListener("mouseenter", fadeIn);
+        footer.addEventListener("mouseleave", fadeOut);
+
+        // Initial fade out when page loads
+        fadeOut();
+    </script>
 </body>
 </html>

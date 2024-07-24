@@ -11,6 +11,31 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/animations.css">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            color: #eaeaea;
+            background: url('data/pictures/Ramme til DnD klippet.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        header, footer {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1; /* Fuldt synlig */
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+
+            header.faded, footer.faded {
+                opacity: 0.2; /* Halvgennemsigtig */
+            }
+
+            header h1, footer p {
+                margin: 0;
+                text-align: center;
+            }
+    </style>
 </head>
 <body>
     <header>
@@ -36,7 +61,7 @@
             </div>
             <div class="quest-details">
                 <h3>Nuværende Quest</h3>
-                <p><strong>Beskrivelse:</strong> Uhyggelige skikkelser bevæger sig i skoven og nogle af landsbyens husdyr, malkekøer osv. er forsvundet. Rejs ind i skoven og find ud af hvad der sker.</p>
+                <p><strong>Beskrivelse:</strong> Mystiske og skræmmende skikkelser er blevet set i skoven, og flere af landsbyens husdyr, herunder malkekøer, er på mystisk vis forsvundet. Indbyggerne er blevet grebet af frygt, og nogle mener, at mørke kræfter er på spil. Jeres opgave er at begive jer ind i skoven, afsløre sandheden bag disse foruroligende hændelser og bringe ro og sikkerhed tilbage til landsbyen. Vær forberedt på ukendte farer og udfordringer; skovens dybder skjuler måske mere, end nogen kan forestille sig..</p>
                 <p><strong>Belønning:</strong> 100 guldstykker hver</p>
             </div>
             <div class="rewards-section">
@@ -67,8 +92,6 @@
         </section>
     </main>
 
-
-
     <footer>
         <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
     </footer>
@@ -83,5 +106,27 @@
     </div>
 
     <script src="js/scripts.js"></script>
+    <script>
+        var header = document.querySelector("header");
+        var footer = document.querySelector("footer");
+
+        function fadeOut() {
+            header.classList.add("faded");
+            footer.classList.add("faded");
+        }
+
+        function fadeIn() {
+            header.classList.remove("faded");
+            footer.classList.remove("faded");
+        }
+
+        header.addEventListener("mouseenter", fadeIn);
+        header.addEventListener("mouseleave", fadeOut);
+        footer.addEventListener("mouseenter", fadeIn);
+        footer.addEventListener("mouseleave", fadeOut);
+
+        // Initial fade out when page loads
+        fadeOut();
+    </script>
 </body>
 </html>

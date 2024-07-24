@@ -29,6 +29,39 @@
             z-index: -1;
         }
 
+        header, footer {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1; /* Fuldt synlig */
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+
+            header.faded, footer.faded {
+                opacity: 0.2; /* Halvgennemsigtig */
+            }
+
+            header h1, footer p {
+                margin: 0;
+                text-align: center;
+            }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+                nav ul li a {
+                    color: #eaeaea;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+
         .character-container {
             display: flex;
             flex-direction: column;
@@ -169,7 +202,6 @@
         <section>
             <h2>Karakterer</h2>
 
-
             <!-- Sen Baelion Character Section -->
             <div class="character-container">
                 <div class="character">
@@ -248,7 +280,7 @@
                         </div>
                     </div>
                     <div class="equipment-tab">
-                        <img src="data/pictures/Sen-baelion-equipment-tab.png" alt="Sen Baelion Equipment Tab">
+                        <img src="data/pictures/sen-baelion-equipment-tab.png" alt="Sen Baelion Equipment Tab">
                         <p>Equipment Slots</p>
                     </div>
                 </div>
@@ -358,45 +390,74 @@
                             <div class="tick" style="left: 70%;"></div>
                             <div class="tick" style="left: 80%;"></div>
                             <div class="tick" style="left: 90%;"></div>
+                            <div class="details">
+                                <p><strong>Level:</strong> 1</p>
+                                <p><strong>Hit Points:</strong> 10</p>
+                                <p><strong>XP:</strong> 166</p>
+                                <p><strong>Race:</strong> Wood Elf</p>
+                                <p><strong>Class:</strong> Ranger</p>
+                                <p><strong>Alignment:</strong> Neutral Good</p>
+                                <p><strong>Ability Scores:</strong></p>
+                                <ul>
+                                    <li>Strength: 14 (+2)</li>
+                                    <li>Dexterity: 18 (+4)</li>
+                                    <li>Constitution: 13 (+1)</li>
+                                    <li>Intelligence: 12 (+1)</li>
+                                    <li>Wisdom: 16 (+3)</li>
+                                    <li>Charisma: 10 (0)</li>
+                                </ul>
+                                <p><strong>Spells:</strong></p>
+                                <ul>
+                                    <li>Hunter's Mark</li>
+                                    <li>Goodberry</li>
+                                </ul>
+                            </div>
+                            <div class="inventory">
+                                <p><strong>Inventory:</strong></p>
+                                <ul>
+                                    <li>Shadow Staff</li>
+                                    <li>Longbow</li>
+                                    <li>Shortsword</li>
+                                    <li>Leather Armor</li>
+                                    <li>Explorer's Pack</li>
+                                    <li>20 Arrows</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="details">
-                            <p><strong>Level:</strong> 1</p>
-                            <p><strong>Hit Points:</strong> 10</p>
-                            <p><strong>XP:</strong> 166</p>
-                            <p><strong>Race:</strong> Wood Elf</p>
-                            <p><strong>Class:</strong> Ranger</p>
-                            <p><strong>Alignment:</strong> Neutral Good</p>
-                            <p><strong>Ability Scores:</strong></p>
-                            <ul>
-                                <li>Strength: 14 (+2)</li>
-                                <li>Dexterity: 18 (+4)</li>
-                                <li>Constitution: 13 (+1)</li>
-                                <li>Intelligence: 12 (+1)</li>
-                                <li>Wisdom: 16 (+3)</li>
-                                <li>Charisma: 10 (0)</li>
-                            </ul>
-                            <p><strong>Spells:</strong></p>
-                            <ul>
-                                <li>Hunter's Mark</li>
-                                <li>Goodberry</li>
-                            </ul>
+                        <div class="equipment-tab">
+                            <img src="data/pictures/zephyrian-emberleaf-equipment-tab.png" alt="Zephyrian Emberleaf Equipment Tab">
+                            <p>Equipment Slots</p>
                         </div>
-                        <div class="inventory">
-                            <p><strong>Inventory:</strong></p>
-                            <ul>
-                                <li>Shadow Staff</li>
-                                <li>Longbow</li>
-                                <li>Shortsword</li>
-                                <li>Leather Armor</li>
-                                <li>Explorer's Pack</li>
-                                <li>20 Arrows</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="equipment-tab">
-                        <img src="data/pictures/zephyrian-emberleaf-equipment-tab.png" alt="Zephyrian Emberleaf Equipment Tab">
-                        <p>Equipment Slots</p>
                     </div>
                 </div>
-            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mythren: Legends Unfolded. Alle rettigheder forbeholdes.</p>
+    </footer>
 
+    <script>
+        // Fade effect for header and footer
+        var header = document.querySelector("header");
+        var footer = document.querySelector("footer");
+
+        function fadeOut() {
+            header.classList.add("faded");
+            footer.classList.add("faded");
+        }
+
+        function fadeIn() {
+            header.classList.remove("faded");
+            footer.classList.remove("faded");
+        }
+
+        header.addEventListener("mouseenter", fadeIn);
+        header.addEventListener("mouseleave", fadeOut);
+        footer.addEventListener("mouseenter", fadeIn);
+        footer.addEventListener("mouseleave", fadeOut);
+
+        // Initial fade out
+        fadeOut();
+    </script>
+</body>
+</html>
