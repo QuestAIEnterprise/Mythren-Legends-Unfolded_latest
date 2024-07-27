@@ -96,14 +96,13 @@
                     font-weight: bold;
                 }
 
-        .hero, .intro, .world, .features, .call-to-action {
+        .intro, .world, .features, .call-to-action {
             position: relative;
             z-index: 3;
             padding: 50px 20px;
-            background: rgba(0, 0, 0, 0.7);
             margin: 20px 0;
             border-radius: 10px;
-            animation: shine 1.5s infinite alternate; /* Add this line */
+            animation: shine 1.5s infinite alternate;
         }
 
         @keyframes shine {
@@ -120,9 +119,58 @@
             }
         }
 
+        .smoke-effect {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            background: url('data/smoke.png') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+            animation: smokeAnimation 5s infinite;
+        }
+
+        .hero-text {
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            background: none; /* Remove background box */
+            margin-top: 100px; /* Adjust this value as needed */
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 50px; /* Adds space above the hero section */
+            margin-bottom: 100px; /* Adjust this value as needed */
+        }
+
+            .hero img {
+                margin: 0 auto 50px; /* Adds space below the image */
+                display: block;
+                width: 80%;
+                margin-bottom: 200px; /* Adjust this value as needed */
+            }
+
+        .intro, .world, .features, .call-to-action {
+            position: relative;
+            z-index: 3;
+            padding: 50px 20px;
+            margin: 200px 0; /* Adds space above these sections */
+            border-radius: 10px;
+            animation: shine 1.5s infinite alternate;
+        }
+        .hero img {
+            margin: 0 auto 50px; /* Adjust this value as needed */
+            display: block;
+            width: 80%; /* Adjust size as needed */
+        }
+
         .hero h2 {
-            font-size: 3rem;
+            font-size: 5rem;
             animation: glowingText 1.5s infinite alternate;
+            background: none; /* Remove background box */
+            margin: 50px 0; /* Adds space above and below these sections */
         }
 
         .tooltip {
@@ -226,7 +274,7 @@
         <main>
             <section class="hero">
                 <div class="hero-text">
-                    <h2>Velkommen til Mythren</h2>
+                    <img src="data/pictures/webside-icon.png" alt="Mythren: Legends Unfolded">
                     <p>Træd ind i en verden fyldt med mystik, magi og ældgamle hemmeligheder. Udforsk fjerne riger, mød heroiske karakterer, og form Mythrens skæbne.</p>
                 </div>
             </section>
